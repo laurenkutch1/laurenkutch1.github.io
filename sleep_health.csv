@@ -1,0 +1,501 @@
+person_id,age,gender,occupation,bmi,country,sleep_duration_hrs,sleep_quality_score,rem_percentage,deep_sleep_percentage,sleep_latency_mins,wake_episodes_per_night,caffeine_mg_before_bed,alcohol_units_before_bed,screen_time_before_bed_mins,exercise_day,steps_that_day,nap_duration_mins,stress_score,work_hours_that_day,chronotype,mental_health_condition,heart_rate_resting_bpm,sleep_aid_used,shift_work,room_temperature_celsius,weekend_sleep_diff_hrs,season,day_type,cognitive_performance_score,sleep_disorder_risk,felt_rested
+1,29,Female,Driver,25.7,Japan,6.19,6.6,22.5,19.3,16,3,0,0.0,32,0,6592,0,4.4,10.7,Morning,Healthy,63,0,0,20.1,1.84,Autumn,Weekday,73.4,Healthy,0
+2,55,Female,Software Engineer,22.0,USA,8.32,6.9,26.9,14.9,17,4,0,0.0,33,1,10111,8,4.0,3.0,Neutral,Healthy,52,1,0,18.0,0.13,Winter,Weekend,99.4,Healthy,1
+3,42,Male,Nurse,25.0,India,3.74,1.0,20.2,16.2,26,4,0,2.0,89,1,9222,28,7.8,3.6,Neutral,Both,72,0,1,17.9,1.67,Spring,Weekend,2.5,Severe,0
+4,37,Female,Student,29.5,India,6.79,6.4,17.7,17.7,13,4,0,1.0,52,1,9190,40,4.9,6.7,Morning,Healthy,71,0,0,19.1,2.37,Summer,Weekend,67.8,Healthy,0
+5,23,Male,Lawyer,23.6,Spain,5.02,3.2,23.3,18.3,30,5,40,0.0,72,0,4273,0,7.4,10.4,Neutral,Healthy,71,0,0,19.7,1.26,Summer,Weekday,38.1,Mild,0
+6,23,Female,Driver,25.5,Brazil,8.16,5.7,17.3,20.1,29,2,150,2.0,72,0,9170,0,5.5,6.2,Neutral,Depression,71,1,0,22.7,0.7,Summer,Weekend,49.9,Mild,1
+7,20,Female,Software Engineer,18.2,Netherlands,7.27,5.1,17.5,18.8,31,2,0,3.0,148,1,10786,0,5.0,4.3,Evening,Anxiety,79,0,0,17.6,0.73,Spring,Weekend,57.9,Mild,1
+8,48,Female,Freelancer,31.5,UK,8.04,6.5,25.3,22.3,22,4,150,0.0,59,1,6194,46,5.5,2.8,Neutral,Anxiety,60,1,0,21.6,0.47,Winter,Weekend,92.0,Mild,0
+9,37,Male,Manager,29.9,USA,6.04,5.4,18.9,15.7,37,0,400,0.0,40,0,6083,44,6.0,5.4,Neutral,Anxiety,74,0,0,17.8,1.8,Autumn,Weekend,53.6,Mild,0
+10,41,Female,Nurse,34.8,USA,6.22,4.9,21.4,15.5,24,3,0,0.0,88,0,5207,0,5.7,12.7,Evening,Healthy,80,1,0,24.4,1.51,Autumn,Weekday,67.8,Mild,1
+11,18,Male,Doctor,29.7,Germany,4.97,2.8,14.5,22.8,20,5,0,0.0,53,1,8524,0,8.8,13.7,Neutral,Healthy,67,1,0,21.5,1.28,Autumn,Weekday,23.6,Moderate,0
+12,58,Female,Nurse,30.6,USA,6.57,4.6,24.5,20.7,24,8,0,3.0,45,1,8567,0,6.9,10.1,Evening,Healthy,59,1,0,17.8,0.66,Spring,Weekday,67.1,Mild,0
+13,46,Male,Lawyer,26.9,Japan,7.25,4.4,18.9,21.5,20,4,0,0.0,54,0,6976,27,7.5,14.1,Evening,Depression,76,1,0,22.1,0.76,Autumn,Weekday,48.4,Mild,0
+14,25,Male,Student,18.6,South Korea,5.81,3.7,18.0,22.3,14,0,0,0.0,95,1,8212,0,5.6,6.0,Neutral,Depression,74,1,0,23.3,1.94,Winter,Weekday,47.9,Healthy,0
+15,24,Male,Doctor,17.1,USA,5.52,4.8,21.1,27.8,16,2,0,0.0,20,0,8426,0,5.6,6.5,Morning,Healthy,77,1,0,19.3,2.35,Winter,Weekend,70.3,Healthy,0
+16,24,Female,Software Engineer,33.9,Japan,6.95,4.9,19.5,22.6,24,6,0,1.0,110,1,13465,76,4.1,8.5,Evening,Healthy,56,1,0,19.7,1.91,Spring,Weekday,68.2,Healthy,0
+17,27,Female,Homemaker,28.5,Australia,7.37,5.9,18.0,19.6,29,2,0,0.0,65,0,4261,36,3.0,0.0,Evening,Both,70,0,0,22.3,0.01,Spring,Weekend,66.8,Mild,1
+18,34,Male,Homemaker,25.6,India,7.61,6.7,20.3,23.9,20,3,80,0.0,16,0,10626,38,3.6,2.7,Evening,Healthy,61,1,0,22.4,2.08,Summer,Weekday,92.0,Healthy,1
+19,31,Female,Student,19.9,Canada,5.98,4.9,20.6,18.1,26,0,0,0.0,83,1,10616,0,5.4,6.8,Evening,Healthy,75,0,0,19.6,-0.71,Winter,Weekday,61.7,Healthy,1
+20,27,Male,Student,28.8,India,4.8,4.7,19.8,26.2,27,0,80,0.0,129,0,987,31,4.8,7.3,Neutral,Anxiety,70,0,0,20.6,-0.56,Winter,Weekday,53.1,Mild,1
+21,37,Female,Teacher,30.3,UK,7.56,5.5,17.1,18.3,23,8,0,2.0,38,1,7239,28,3.7,3.1,Evening,Healthy,74,0,0,25.5,2.27,Spring,Weekend,86.5,Healthy,1
+22,22,Male,Student,30.1,Italy,5.81,5.1,30.0,24.5,13,5,0,0.0,180,1,8144,0,5.0,5.9,Neutral,Healthy,58,0,0,25.4,0.71,Winter,Weekday,73.8,Healthy,1
+23,27,Female,Retired,29.9,France,7.78,7.4,24.2,25.6,6,2,0,0.0,24,1,5587,69,2.5,2.8,Neutral,Healthy,63,1,0,24.4,1.55,Autumn,Weekday,100.0,Healthy,1
+24,29,Female,Student,31.4,Australia,7.29,7.1,15.9,20.7,4,3,0,1.0,92,0,6940,9,5.2,5.4,Morning,Healthy,70,1,0,21.0,0.36,Spring,Weekend,78.3,Healthy,1
+25,32,Male,Driver,25.1,France,5.34,4.5,20.0,16.0,28,4,0,0.0,126,0,2361,0,6.9,8.4,Evening,Healthy,74,1,0,22.4,-0.83,Summer,Weekday,44.2,Mild,0
+26,44,Male,Nurse,24.1,USA,5.76,5.3,24.5,20.3,16,4,0,0.0,33,1,9818,58,6.0,11.6,Evening,Healthy,70,0,0,19.4,1.15,Summer,Weekday,72.6,Healthy,1
+27,24,Male,Retired,27.2,Japan,9.98,7.3,19.7,24.2,8,2,0,3.0,19,1,7234,0,2.2,0.1,Neutral,Healthy,72,0,0,16.1,0.23,Summer,Weekend,80.7,Healthy,1
+28,34,Female,Doctor,22.9,USA,5.36,3.2,26.0,21.8,23,6,0,0.0,38,1,12520,0,7.9,13.3,Morning,Anxiety,57,1,0,22.4,1.65,Autumn,Weekday,46.0,Moderate,0
+29,36,Male,Doctor,27.6,UK,8.13,5.6,14.5,20.3,34,3,0,4.0,147,0,2987,0,5.6,11.3,Evening,Healthy,70,0,0,19.0,0.9,Summer,Weekend,66.8,Mild,0
+30,19,Male,Nurse,18.9,Canada,3.77,2.6,16.5,15.4,32,2,0,0.0,35,0,8207,33,7.3,14.3,Evening,Anxiety,63,0,0,16.6,0.71,Winter,Weekday,11.7,Moderate,0
+31,37,Female,Software Engineer,26.0,Germany,4.7,2.3,20.4,13.5,37,5,300,2.0,101,1,7463,0,7.5,9.4,Evening,Healthy,70,1,0,21.8,1.92,Winter,Weekday,26.6,Moderate,0
+32,23,Female,Student,29.3,India,6.37,6.7,21.7,30.0,1,3,0,0.0,109,1,10493,0,5.6,5.2,Morning,Healthy,68,1,0,18.9,3.0,Autumn,Weekday,99.6,Healthy,1
+33,20,Female,Homemaker,31.8,UK,7.99,6.3,23.8,26.3,18,4,0,0.0,24,1,12409,0,4.3,0.0,Evening,Anxiety,59,0,0,19.4,1.34,Autumn,Weekend,85.5,Mild,1
+34,55,Female,Software Engineer,28.3,India,8.52,6.1,17.6,22.9,22,2,200,1.0,44,1,8043,0,4.5,6.1,Evening,Anxiety,61,1,0,22.5,0.23,Winter,Weekend,61.0,Healthy,1
+35,57,Female,Manager,29.6,India,5.88,4.1,24.4,14.5,22,3,0,0.0,27,1,10650,0,6.2,9.9,Neutral,Healthy,63,1,0,20.4,1.4,Spring,Weekday,52.2,Mild,1
+36,45,Male,Teacher,27.0,Japan,6.44,5.2,24.7,21.1,8,2,80,0.0,58,1,6350,0,5.1,7.4,Neutral,Depression,78,1,0,15.6,1.3,Winter,Weekday,59.3,Mild,0
+37,27,Male,Manager,29.8,India,6.76,5.9,20.7,20.1,23,3,80,1.0,68,0,3452,0,6.8,5.3,Evening,Healthy,78,0,0,23.9,2.54,Winter,Weekend,73.6,Healthy,0
+38,21,Female,Software Engineer,25.6,South Korea,6.38,5.1,23.8,23.5,13,2,80,0.0,40,0,4159,0,5.9,8.9,Neutral,Anxiety,76,1,0,18.0,2.16,Summer,Weekday,66.5,Healthy,1
+39,40,Female,Freelancer,29.6,India,7.18,4.6,18.9,15.6,23,2,0,2.0,34,0,2704,0,4.7,7.3,Neutral,Both,66,1,0,25.3,0.85,Winter,Weekday,43.6,Mild,0
+40,31,Male,Student,21.8,UK,7.69,6.8,25.7,24.2,29,2,40,0.0,180,0,7526,0,4.6,0.0,Neutral,Healthy,77,0,0,18.2,1.57,Winter,Weekend,92.5,Healthy,1
+41,22,Male,Manager,21.2,Japan,4.05,2.3,15.3,28.3,29,2,0,2.0,133,0,4477,17,5.8,7.9,Neutral,Both,64,1,0,15.0,0.04,Summer,Weekday,0.0,Moderate,0
+42,33,Male,Student,27.3,South Korea,5.34,3.1,12.1,12.8,24,2,150,0.0,42,0,6742,17,8.1,1.7,Morning,Depression,86,1,0,20.9,1.86,Spring,Weekday,11.3,Severe,0
+43,19,Female,Sales,27.7,Brazil,5.52,5.1,19.9,23.7,14,2,0,0.0,13,0,7377,26,5.4,8.2,Morning,Healthy,57,0,0,19.8,1.79,Winter,Weekday,55.3,Healthy,0
+44,51,Female,Nurse,23.3,USA,5.8,2.3,20.2,11.0,25,4,0,0.0,40,0,8803,66,7.8,12.7,Evening,Anxiety,62,0,0,20.5,0.62,Spring,Weekend,28.3,Mild,0
+45,26,Male,Teacher,27.3,Netherlands,6.68,7.2,26.3,24.1,8,0,0,0.0,49,1,9376,0,5.4,10.1,Morning,Healthy,72,0,0,19.9,0.28,Summer,Weekday,100.0,Healthy,1
+46,39,Male,Teacher,22.6,Sweden,5.24,3.8,23.1,15.8,45,4,400,0.0,124,0,4200,58,7.3,8.2,Evening,Healthy,71,1,0,19.8,0.69,Summer,Weekday,37.7,Moderate,0
+47,27,Male,Freelancer,24.5,Australia,7.57,4.3,17.1,18.9,22,6,80,0.0,16,0,10270,0,5.9,2.0,Neutral,Anxiety,64,0,0,15.8,1.73,Autumn,Weekend,54.6,Mild,0
+48,34,Male,Software Engineer,29.4,Germany,6.94,4.8,19.3,20.6,18,5,0,0.0,91,1,8303,0,5.3,6.9,Evening,Healthy,73,0,0,17.4,0.78,Spring,Weekday,82.3,Healthy,1
+49,35,Male,Driver,27.4,Spain,5.99,1.5,24.1,21.3,28,5,80,0.0,73,1,6994,0,6.7,11.1,Neutral,Anxiety,68,1,1,23.9,0.5,Autumn,Weekday,30.2,Moderate,0
+50,24,Male,Teacher,18.8,USA,7.93,4.5,18.3,24.2,34,0,100,0.0,25,1,13960,0,6.7,5.9,Evening,Depression,79,0,0,23.8,1.81,Summer,Weekday,58.4,Mild,1
+51,58,Male,Retired,32.8,Germany,9.42,7.7,23.9,11.4,16,3,100,0.0,5,0,5035,0,1.6,0.0,Neutral,Healthy,73,1,0,16.0,0.24,Autumn,Weekend,74.8,Healthy,1
+52,43,Male,Teacher,25.2,India,6.03,5.2,22.1,15.3,30,2,150,1.0,98,0,3380,0,6.3,5.7,Evening,Healthy,63,1,0,25.0,1.46,Summer,Weekday,55.9,Healthy,0
+53,54,Male,Freelancer,19.5,India,6.22,3.4,21.6,21.9,27,1,0,0.0,88,0,6850,0,6.3,6.1,Evening,Both,74,0,0,28.0,0.12,Spring,Weekday,39.8,Mild,1
+54,50,Female,Doctor,29.0,UK,5.48,3.9,17.8,19.5,33,2,0,0.0,48,0,8312,40,6.4,14.0,Evening,Healthy,52,1,0,23.8,0.71,Spring,Weekday,38.6,Mild,0
+55,37,Female,Freelancer,27.8,UK,6.98,5.0,27.0,18.4,22,6,100,0.0,31,1,6828,0,5.8,9.1,Morning,Healthy,58,1,0,19.9,0.5,Winter,Weekday,69.5,Healthy,0
+56,52,Female,Sales,23.0,Australia,4.99,4.3,22.4,11.2,10,4,0,0.0,14,0,7964,62,5.1,10.6,Neutral,Healthy,61,1,1,22.4,0.93,Winter,Weekday,37.9,Mild,0
+57,21,Female,Homemaker,25.4,Canada,6.29,6.2,24.0,22.5,26,2,100,2.0,15,1,8097,5,4.5,3.4,Neutral,Healthy,63,1,0,24.4,0.5,Spring,Weekday,70.3,Healthy,0
+58,24,Female,Student,31.9,Canada,3.59,2.1,20.5,17.2,22,8,0,0.0,87,0,8386,0,7.9,7.1,Neutral,Anxiety,71,0,0,15.0,0.44,Summer,Weekday,12.6,Severe,0
+59,19,Male,Software Engineer,28.3,South Korea,7.77,5.7,13.3,25.8,13,4,0,2.0,80,0,1381,42,5.9,9.7,Morning,Depression,62,0,0,21.7,0.09,Autumn,Weekday,51.7,Mild,0
+60,28,Male,Manager,34.2,Japan,6.29,5.7,18.3,17.3,25,6,100,3.0,90,1,10915,0,4.2,9.3,Evening,Healthy,62,1,1,25.7,-0.78,Spring,Weekend,62.5,Mild,1
+61,30,Other,Software Engineer,28.0,USA,6.92,5.0,20.3,16.4,19,6,200,0.0,22,0,4467,0,6.7,7.1,Morning,Healthy,82,1,0,22.0,2.02,Spring,Weekday,50.1,Healthy,1
+62,26,Male,Nurse,26.9,UK,5.52,4.6,19.2,16.4,19,4,40,3.0,24,0,1788,0,5.3,10.8,Neutral,Healthy,69,1,0,20.5,3.0,Spring,Weekday,32.1,Healthy,0
+63,46,Male,Driver,33.1,Italy,6.69,3.0,23.8,15.1,32,5,200,3.0,57,1,8507,65,6.4,7.8,Neutral,Both,74,1,0,15.4,-0.12,Autumn,Weekday,29.4,Severe,0
+64,29,Male,Doctor,22.6,Australia,4.12,2.7,20.7,19.8,31,3,80,0.0,21,0,1932,0,7.8,9.5,Evening,Healthy,63,1,1,16.6,1.86,Winter,Weekday,29.4,Mild,0
+65,27,Female,Homemaker,25.3,Italy,8.95,6.4,21.0,21.0,29,5,0,0.0,58,1,7800,0,3.0,7.7,Neutral,Healthy,62,1,0,18.1,0.09,Spring,Weekday,77.7,Healthy,1
+66,35,Male,Student,29.8,Australia,6.77,5.5,20.0,22.4,25,3,100,0.0,79,0,6191,0,6.9,0.5,Neutral,Anxiety,61,1,0,18.9,1.37,Summer,Weekend,66.8,Mild,1
+67,23,Male,Driver,26.4,Germany,6.11,4.7,17.5,17.1,12,3,0,0.0,27,0,6430,0,6.0,8.3,Morning,Healthy,62,0,0,24.7,-0.02,Winter,Weekday,63.3,Healthy,0
+68,45,Female,Lawyer,31.1,Germany,4.86,3.8,27.1,20.6,16,7,0,0.0,70,0,6911,0,7.6,12.6,Neutral,Healthy,59,0,0,22.5,2.18,Winter,Weekday,42.5,Moderate,0
+69,20,Female,Sales,26.0,Canada,7.93,6.5,21.4,30.0,14,4,0,2.0,46,0,5431,0,6.1,10.3,Neutral,Healthy,76,1,0,20.4,0.18,Spring,Weekday,69.9,Healthy,0
+70,62,Male,Software Engineer,31.1,Brazil,6.76,5.5,19.8,12.4,19,5,100,1.0,32,0,10278,33,4.0,6.9,Neutral,Healthy,60,1,0,21.3,1.54,Winter,Weekday,63.2,Healthy,0
+71,43,Female,Manager,23.0,Japan,5.44,3.1,19.9,17.2,28,3,200,0.0,41,0,500,0,6.1,10.5,Neutral,Anxiety,72,1,0,19.6,1.15,Autumn,Weekday,39.6,Mild,0
+72,24,Other,Teacher,25.4,Mexico,5.57,2.6,16.9,20.0,31,3,0,1.0,44,0,5594,0,7.5,9.7,Evening,Healthy,67,1,1,26.1,1.71,Summer,Weekday,31.9,Mild,0
+73,18,Male,Retired,22.5,UK,7.3,7.1,17.2,24.4,13,2,0,4.0,15,0,6735,8,2.5,2.5,Morning,Healthy,65,0,0,24.0,-0.0,Summer,Weekday,81.5,Healthy,1
+74,45,Male,Teacher,24.6,Canada,7.48,6.7,20.0,20.4,21,4,0,2.0,21,1,7778,0,5.3,10.3,Evening,Healthy,53,0,0,20.3,0.55,Summer,Weekday,87.1,Healthy,1
+75,41,Male,Retired,18.3,UK,7.32,6.7,24.4,20.0,8,4,0,1.0,9,0,9754,74,2.9,0.1,Morning,Healthy,56,1,0,15.9,0.53,Summer,Weekday,83.5,Healthy,1
+76,41,Female,Sales,24.5,Brazil,6.17,5.0,23.6,19.9,26,4,0,0.0,51,1,9028,63,4.9,8.6,Evening,Healthy,65,1,0,15.7,1.08,Winter,Weekday,69.7,Healthy,0
+77,43,Male,Sales,29.3,USA,5.76,4.2,21.5,17.3,29,3,0,0.0,107,0,6138,0,6.3,10.7,Neutral,Healthy,62,1,0,26.9,0.01,Summer,Weekday,49.0,Healthy,0
+78,20,Female,Doctor,20.5,Mexico,6.58,5.2,16.3,23.6,18,0,0,0.0,17,1,2402,0,8.9,8.5,Morning,Healthy,77,1,0,26.0,1.43,Summer,Weekend,70.3,Healthy,0
+79,29,Female,Nurse,19.8,USA,7.87,6.9,20.1,19.5,12,3,100,0.0,16,0,5230,0,6.5,7.1,Morning,Healthy,72,1,0,18.8,0.78,Spring,Weekend,88.1,Healthy,0
+80,22,Female,Nurse,22.4,Japan,5.06,4.4,23.9,26.8,25,3,0,1.0,19,1,6707,0,6.0,9.1,Neutral,Healthy,56,0,0,15.7,0.05,Spring,Weekday,70.0,Mild,0
+81,48,Female,Sales,20.2,Germany,6.42,4.8,18.0,19.4,11,4,0,2.0,79,0,8055,0,6.0,9.1,Neutral,Depression,77,1,0,20.1,2.2,Summer,Weekday,39.5,Mild,0
+82,37,Other,Manager,32.5,Mexico,5.86,3.8,17.3,21.8,30,6,300,0.0,94,0,6853,46,5.1,10.7,Morning,Healthy,66,1,0,20.3,1.35,Spring,Weekday,41.0,Mild,0
+83,28,Female,Manager,24.0,Japan,5.29,3.6,20.1,18.2,16,2,0,0.0,124,0,5714,6,7.2,11.1,Morning,Anxiety,78,1,0,21.2,0.65,Autumn,Weekday,35.8,Mild,0
+84,20,Male,Manager,31.3,Canada,5.15,6.4,17.3,21.9,4,1,0,0.0,11,0,3866,56,3.3,14.3,Neutral,Healthy,70,0,0,25.7,0.08,Autumn,Weekday,73.7,Healthy,0
+85,27,Male,Sales,27.0,USA,7.22,7.3,17.4,20.0,13,2,80,2.0,59,0,8968,0,5.4,11.1,Neutral,Healthy,65,1,0,15.2,1.08,Winter,Weekday,73.7,Healthy,0
+86,28,Female,Homemaker,26.2,India,8.0,6.0,23.1,17.8,29,2,0,0.0,139,1,8669,0,4.5,0.0,Evening,Anxiety,67,0,0,17.4,0.09,Summer,Weekend,85.8,Healthy,1
+87,41,Female,Teacher,24.8,India,6.7,5.2,22.0,16.1,16,4,0,0.0,13,0,11311,0,3.6,7.1,Neutral,Healthy,62,1,0,21.7,0.82,Autumn,Weekday,69.9,Healthy,1
+88,38,Female,Manager,22.8,Germany,4.34,4.0,15.2,24.1,11,3,0,1.0,38,1,8407,0,5.0,13.7,Morning,Depression,63,1,0,17.9,2.31,Spring,Weekday,34.3,Mild,0
+89,49,Female,Lawyer,17.7,Germany,4.82,3.9,20.4,15.3,33,2,0,0.0,67,0,8297,0,7.7,14.0,Evening,Anxiety,62,1,0,20.2,1.57,Autumn,Weekday,35.6,Moderate,0
+90,33,Male,Teacher,25.7,India,5.59,5.3,23.2,10.8,18,3,0,0.0,54,0,2775,0,6.4,5.6,Evening,Healthy,74,1,0,17.0,1.74,Summer,Weekday,45.0,Healthy,0
+91,22,Male,Driver,25.3,USA,3.0,3.4,22.6,22.5,18,6,0,1.0,78,0,9995,0,5.4,9.4,Neutral,Depression,68,0,1,22.0,1.56,Autumn,Weekday,13.1,Moderate,0
+92,41,Other,Sales,29.9,India,5.59,4.8,20.9,15.2,18,4,0,2.0,32,0,6917,0,5.6,7.5,Neutral,Healthy,65,1,0,24.4,0.48,Winter,Weekday,47.2,Healthy,1
+93,43,Male,Doctor,26.7,USA,3.77,3.3,19.6,13.7,23,1,100,1.0,50,0,3693,41,7.8,15.7,Evening,Healthy,61,0,0,23.4,1.36,Autumn,Weekday,34.8,Mild,0
+94,35,Male,Software Engineer,25.8,USA,7.43,7.4,16.5,21.2,18,3,0,0.0,90,1,10311,0,3.1,9.0,Neutral,Healthy,69,1,0,21.0,0.67,Autumn,Weekend,93.2,Healthy,1
+95,43,Female,Manager,27.6,UK,6.51,5.4,20.2,15.5,20,6,40,0.0,50,0,9869,0,4.3,8.7,Neutral,Healthy,51,1,0,15.0,1.04,Autumn,Weekend,68.4,Healthy,1
+96,33,Female,Homemaker,27.8,Spain,6.44,5.2,25.0,23.0,26,5,40,0.0,180,1,15969,0,5.3,2.5,Neutral,Healthy,49,1,0,24.5,2.5,Autumn,Weekday,72.9,Mild,1
+97,34,Female,Sales,24.3,Germany,7.76,6.8,24.2,19.9,29,2,100,0.0,26,1,8677,5,3.7,7.7,Evening,Healthy,60,1,0,22.3,1.73,Winter,Weekend,100.0,Healthy,1
+98,31,Female,Homemaker,26.7,USA,5.88,4.3,17.2,19.0,22,2,0,2.0,32,0,7060,25,5.7,6.0,Evening,Healthy,74,1,0,18.8,1.27,Autumn,Weekday,40.2,Healthy,1
+99,19,Male,Homemaker,23.8,Germany,6.23,3.9,18.3,17.9,15,2,0,0.0,16,0,6680,11,6.4,4.9,Morning,Anxiety,73,0,0,19.2,0.64,Autumn,Weekday,44.2,Healthy,0
+100,21,Male,Freelancer,19.3,Australia,6.89,4.3,17.1,23.9,26,2,0,0.0,64,0,6454,25,6.0,6.3,Evening,Anxiety,70,1,0,21.5,0.89,Autumn,Weekday,56.6,Healthy,1
+101,19,Female,Freelancer,23.4,USA,7.27,7.2,22.0,21.5,15,1,0,0.0,78,1,10066,0,5.0,5.5,Neutral,Healthy,58,0,0,23.4,0.14,Spring,Weekday,93.4,Healthy,1
+102,38,Male,Driver,28.1,India,6.39,6.2,29.7,16.6,24,7,0,0.0,34,1,9068,0,4.9,11.4,Evening,Healthy,56,1,0,20.1,2.17,Summer,Weekday,82.6,Healthy,1
+103,27,Female,Homemaker,28.5,USA,7.38,7.5,16.3,22.6,15,2,0,1.0,28,0,8447,0,3.6,4.1,Evening,Healthy,74,1,0,20.6,2.52,Summer,Weekday,95.2,Healthy,1
+104,34,Male,Nurse,32.8,USA,5.26,4.7,19.5,13.8,30,3,80,0.0,17,0,500,0,6.2,11.1,Evening,Healthy,75,1,0,20.0,1.78,Winter,Weekday,53.9,Mild,0
+105,51,Female,Retired,30.7,UK,7.97,5.9,23.5,21.0,9,7,0,0.0,12,1,12047,31,3.9,0.0,Neutral,Healthy,64,1,1,20.7,0.68,Summer,Weekend,84.4,Healthy,0
+106,26,Female,Lawyer,25.9,Brazil,6.02,5.4,19.1,14.3,16,2,0,4.0,164,0,6779,0,5.0,12.9,Neutral,Healthy,83,0,0,23.3,1.73,Summer,Weekday,44.8,Healthy,1
+107,31,Male,Freelancer,20.5,Sweden,8.84,5.5,15.0,18.9,31,3,150,2.0,40,0,10691,0,4.1,4.4,Evening,Healthy,57,1,0,19.3,3.0,Summer,Weekday,57.1,Healthy,0
+108,42,Male,Homemaker,30.5,France,6.61,5.1,23.8,17.3,15,5,0,1.0,80,1,2561,0,5.3,8.2,Morning,Anxiety,73,0,0,20.2,2.53,Spring,Weekday,68.4,Mild,0
+109,25,Female,Student,35.3,India,5.64,2.7,24.6,26.6,29,8,0,0.0,50,1,9890,22,6.4,6.7,Evening,Healthy,69,1,1,19.2,-0.44,Autumn,Weekday,54.8,Mild,0
+110,20,Female,Retired,23.9,South Korea,7.77,6.1,21.1,26.0,29,3,300,0.0,11,1,2698,29,2.8,0.7,Evening,Depression,87,1,0,18.1,1.15,Summer,Weekday,83.1,Mild,1
+111,27,Male,Nurse,25.3,Italy,6.29,4.8,19.7,22.9,29,4,100,0.0,83,0,4457,15,6.4,8.7,Evening,Healthy,65,1,0,21.3,1.34,Spring,Weekday,56.8,Healthy,0
+112,23,Male,Driver,27.1,USA,5.72,4.7,15.5,26.7,19,1,150,1.0,67,0,7614,0,5.2,9.5,Neutral,Healthy,59,0,0,23.1,1.06,Autumn,Weekday,52.9,Healthy,0
+113,53,Male,Driver,23.1,USA,5.0,3.5,18.5,16.6,20,3,0,0.0,50,1,9627,43,7.4,9.8,Morning,Healthy,65,1,0,16.8,0.95,Autumn,Weekday,36.7,Mild,0
+114,45,Female,Nurse,25.3,Australia,6.88,3.4,16.1,21.1,11,2,0,0.0,67,1,7281,0,9.0,10.6,Morning,Anxiety,76,1,0,21.1,0.2,Winter,Weekend,58.4,Healthy,0
+115,38,Male,Doctor,27.9,USA,5.79,4.0,15.8,18.9,18,3,0,0.0,38,0,10619,0,7.2,10.6,Neutral,Anxiety,65,0,0,21.5,0.84,Autumn,Weekday,50.3,Mild,0
+116,48,Female,Teacher,33.9,South Korea,5.83,4.1,24.7,14.4,17,4,40,0.0,63,1,10931,56,4.8,9.2,Neutral,Healthy,61,0,0,25.5,1.44,Winter,Weekday,61.8,Healthy,0
+117,45,Male,Homemaker,21.9,Netherlands,8.23,6.6,23.6,13.3,25,0,80,0.0,76,0,8620,26,3.8,0.3,Evening,Healthy,61,1,0,23.2,1.5,Spring,Weekend,81.6,Healthy,1
+118,24,Male,Teacher,21.8,Brazil,7.67,7.1,19.4,22.1,27,1,300,0.0,120,1,6439,0,7.7,5.1,Neutral,Healthy,67,0,0,21.8,2.14,Spring,Weekend,87.8,Healthy,0
+119,50,Female,Software Engineer,27.2,India,4.2,2.9,16.1,19.5,23,6,0,1.0,101,0,7949,0,6.4,5.8,Morning,Anxiety,71,0,0,20.7,0.34,Autumn,Weekday,10.6,Moderate,0
+120,35,Male,Manager,24.0,Mexico,6.32,5.4,17.4,16.3,17,5,0,0.0,71,0,2648,21,5.8,8.7,Neutral,Depression,66,1,0,22.4,0.43,Autumn,Weekend,54.1,Mild,1
+121,45,Male,Manager,23.9,UK,8.65,6.9,18.9,20.2,9,2,0,2.0,25,1,13992,36,6.6,5.8,Morning,Healthy,45,1,0,19.9,1.48,Summer,Weekend,77.6,Healthy,0
+122,50,Female,Driver,24.3,Sweden,5.29,3.9,22.2,11.4,23,3,40,0.0,39,0,12022,46,6.7,5.9,Neutral,Healthy,61,0,0,23.0,3.0,Summer,Weekday,38.2,Mild,0
+123,27,Male,Student,21.3,Germany,7.38,3.2,17.5,19.1,34,6,40,0.0,59,0,500,0,7.8,5.5,Evening,Both,75,0,0,21.4,0.42,Winter,Weekday,34.8,Moderate,0
+124,22,Female,Homemaker,29.5,Canada,8.75,6.1,12.9,25.7,20,2,80,6.0,39,0,6528,0,4.6,5.2,Neutral,Healthy,58,0,0,18.5,0.78,Spring,Weekend,59.3,Healthy,1
+125,25,Female,Nurse,23.0,India,6.25,3.6,23.4,28.0,20,5,0,0.0,18,1,14657,27,6.8,8.8,Evening,Anxiety,66,1,0,27.2,1.56,Summer,Weekday,49.2,Mild,0
+126,31,Female,Nurse,27.5,Brazil,6.59,2.9,14.9,15.9,34,7,0,1.0,81,0,5053,0,5.9,13.4,Evening,Anxiety,73,1,0,16.8,1.32,Spring,Weekday,26.1,Mild,0
+127,45,Male,Sales,16.0,USA,5.71,4.0,18.4,20.2,21,1,300,0.0,100,1,7916,57,4.4,3.8,Neutral,Depression,74,0,0,16.5,1.31,Spring,Weekend,60.6,Mild,0
+128,48,Male,Homemaker,34.6,Canada,7.89,6.1,20.7,23.2,23,1,200,0.0,68,1,8810,43,5.1,4.5,Neutral,Healthy,59,0,0,15.4,1.38,Spring,Weekday,83.1,Healthy,1
+129,18,Female,Manager,18.9,France,6.25,5.2,21.9,30.0,26,2,0,0.0,100,1,8782,40,6.2,9.2,Neutral,Anxiety,73,0,0,17.7,1.32,Winter,Weekday,76.3,Mild,0
+130,34,Female,Teacher,25.3,UK,9.02,4.7,19.5,20.6,21,0,40,0.0,17,0,5273,0,6.9,6.6,Neutral,Depression,64,0,0,16.3,-0.7,Autumn,Weekend,51.0,Healthy,1
+131,31,Female,Retired,27.5,India,7.75,7.4,25.6,24.7,29,3,0,0.0,7,1,11011,41,2.4,2.9,Evening,Healthy,64,1,0,22.2,0.67,Summer,Weekday,100.0,Healthy,1
+132,25,Female,Manager,24.3,UK,6.4,6.8,23.3,16.0,16,0,0,0.0,36,1,8815,9,4.5,12.6,Evening,Healthy,70,1,0,17.4,0.25,Winter,Weekday,82.2,Healthy,0
+133,22,Male,Student,24.7,Brazil,6.26,4.5,20.0,21.1,32,4,200,0.0,104,0,3239,0,8.3,6.6,Morning,Anxiety,70,0,0,19.7,1.54,Winter,Weekday,46.5,Mild,0
+134,28,Male,Retired,20.5,Spain,6.93,4.8,24.2,24.7,18,2,100,0.0,10,1,1419,0,3.3,1.5,Neutral,Anxiety,69,1,0,24.5,2.02,Winter,Weekday,70.5,Healthy,1
+135,54,Female,Manager,28.9,USA,6.37,2.9,17.8,14.2,22,7,40,2.0,11,1,9033,5,7.8,9.5,Neutral,Both,64,1,0,19.5,0.66,Winter,Weekday,37.6,Moderate,0
+136,28,Female,Doctor,22.5,Brazil,5.77,5.8,23.7,19.6,20,1,0,0.0,31,1,13546,32,5.7,11.4,Evening,Healthy,77,1,0,18.6,2.01,Spring,Weekday,68.7,Healthy,1
+137,34,Male,Sales,28.5,Spain,6.27,6.0,20.0,23.2,24,1,0,0.0,180,1,8336,0,4.0,8.2,Neutral,Healthy,57,0,0,24.5,0.96,Summer,Weekday,76.5,Healthy,0
+138,40,Female,Teacher,28.2,Germany,7.14,5.8,23.4,21.5,14,3,0,0.0,53,0,7453,0,6.3,6.2,Neutral,Healthy,67,0,0,23.9,-0.04,Summer,Weekday,70.4,Healthy,1
+139,29,Female,Nurse,29.1,India,4.76,3.0,22.7,16.9,11,6,0,0.0,47,1,8837,0,7.5,14.8,Morning,Healthy,67,0,0,21.8,1.72,Summer,Weekday,49.6,Mild,0
+140,58,Female,Student,26.0,Canada,5.58,5.6,23.8,18.0,26,2,0,0.0,40,1,14223,0,5.3,5.7,Evening,Healthy,66,0,0,20.3,1.14,Summer,Weekday,68.2,Healthy,1
+141,57,Male,Retired,26.4,France,7.57,7.3,20.4,17.3,22,2,100,0.0,58,1,10803,62,3.7,0.0,Neutral,Healthy,57,1,0,20.9,0.15,Summer,Weekend,97.8,Healthy,1
+142,26,Male,Homemaker,25.8,USA,7.27,4.8,25.7,21.3,30,2,0,0.0,17,0,5815,0,5.7,6.2,Evening,Both,64,1,0,23.6,1.77,Summer,Weekday,67.2,Mild,1
+143,33,Female,Lawyer,37.7,Canada,4.92,4.2,22.4,26.0,26,0,0,1.0,126,1,7711,44,9.3,10.4,Evening,Healthy,67,0,0,24.5,0.98,Winter,Weekday,63.1,Mild,0
+144,27,Male,Student,26.4,India,5.61,4.9,20.4,29.3,12,1,0,0.0,59,1,15202,0,6.0,8.0,Morning,Healthy,59,1,0,21.4,0.36,Summer,Weekday,60.9,Healthy,1
+145,27,Female,Sales,28.9,Brazil,7.24,7.1,28.6,24.0,16,6,0,0.0,25,1,14308,68,5.2,3.5,Evening,Healthy,64,1,0,20.4,0.63,Summer,Weekend,100.0,Healthy,0
+146,19,Female,Freelancer,26.3,Spain,8.7,6.6,20.2,27.4,16,4,0,0.0,61,0,4851,0,5.1,1.2,Morning,Healthy,66,0,0,17.9,0.93,Summer,Weekend,80.2,Healthy,0
+147,37,Female,Freelancer,23.4,USA,6.05,4.3,17.5,15.8,36,2,200,0.0,71,1,10951,0,5.2,5.8,Evening,Healthy,62,0,0,23.3,2.05,Spring,Weekday,71.8,Healthy,0
+148,33,Female,Driver,16.0,South Korea,7.29,5.1,13.4,23.5,21,1,0,0.0,17,1,8322,0,6.7,3.8,Evening,Anxiety,61,1,1,19.7,0.84,Summer,Weekend,62.4,Mild,0
+149,20,Male,Sales,32.3,Japan,4.35,3.4,17.8,14.5,16,5,0,0.0,20,0,1917,20,6.6,7.8,Neutral,Depression,65,0,0,20.3,0.8,Summer,Weekday,20.5,Severe,0
+150,26,Female,Software Engineer,30.2,Netherlands,5.23,5.0,19.6,18.8,24,3,0,1.0,59,0,5069,0,4.9,11.8,Evening,Healthy,69,0,0,21.5,0.62,Spring,Weekday,40.3,Mild,0
+151,51,Male,Student,28.8,Japan,5.86,4.0,17.3,21.3,18,6,0,0.0,39,1,5409,0,7.2,4.1,Neutral,Healthy,61,0,0,23.0,2.08,Spring,Weekday,50.8,Mild,0
+152,25,Female,Student,37.5,South Korea,5.19,3.8,17.4,20.4,40,3,300,0.0,27,1,11686,37,5.7,1.7,Evening,Healthy,71,0,0,28.0,1.97,Spring,Weekday,45.6,Moderate,0
+153,23,Male,Software Engineer,32.0,USA,7.23,5.7,22.2,21.1,21,3,80,0.0,121,1,10419,0,6.8,11.2,Neutral,Anxiety,62,0,0,18.3,1.06,Autumn,Weekday,73.3,Mild,1
+154,33,Female,Software Engineer,20.5,Japan,5.61,3.9,22.4,17.6,31,6,80,0.0,63,1,16941,44,5.4,8.1,Evening,Healthy,65,1,0,20.5,0.95,Spring,Weekday,48.2,Mild,0
+155,62,Female,Freelancer,27.3,Sweden,5.48,4.2,17.1,14.0,18,5,0,1.0,97,0,1485,71,5.9,7.9,Morning,Healthy,70,0,0,17.8,0.93,Autumn,Weekday,51.2,Mild,0
+156,25,Female,Teacher,29.3,South Korea,7.17,5.5,19.8,24.2,10,3,0,1.0,35,0,584,0,5.7,9.0,Neutral,Healthy,77,1,0,18.6,0.47,Spring,Weekday,69.1,Healthy,1
+157,39,Female,Nurse,30.9,Japan,7.93,4.9,22.0,17.9,14,3,0,1.0,24,0,4717,0,8.7,8.2,Neutral,Both,71,0,0,19.4,0.86,Autumn,Weekend,61.3,Moderate,0
+158,43,Female,Doctor,27.5,Italy,5.67,4.0,29.0,21.6,22,1,40,0.0,27,1,10476,0,7.7,9.1,Evening,Healthy,75,1,0,21.3,2.62,Winter,Weekday,72.9,Healthy,0
+159,25,Female,Driver,24.3,UK,6.52,6.1,19.7,26.8,23,3,0,2.0,94,0,11527,0,4.5,8.2,Evening,Healthy,66,1,0,22.2,1.18,Autumn,Weekday,61.6,Healthy,0
+160,41,Female,Lawyer,21.6,Japan,4.01,3.9,19.7,26.7,19,2,0,0.0,39,0,4853,0,7.8,13.2,Neutral,Healthy,66,1,1,17.6,1.64,Summer,Weekday,23.6,Mild,0
+161,29,Female,Driver,29.3,Japan,5.94,2.7,22.2,21.8,11,6,0,0.0,55,1,10650,0,7.0,4.5,Neutral,Depression,72,1,0,25.4,0.19,Winter,Weekend,53.8,Mild,1
+162,38,Female,Student,27.1,UK,5.31,3.9,20.6,20.4,28,2,0,1.0,46,1,14354,14,9.1,5.0,Evening,Healthy,65,1,0,17.9,1.31,Spring,Weekday,44.5,Mild,0
+163,38,Male,Nurse,21.4,Japan,7.27,6.9,19.5,16.0,16,4,0,1.0,23,0,1605,13,6.8,12.1,Neutral,Healthy,69,1,0,23.0,1.24,Winter,Weekday,75.3,Healthy,0
+164,35,Male,Nurse,33.5,Italy,8.73,4.8,19.4,17.6,25,2,0,0.0,24,0,5026,58,6.7,9.6,Evening,Depression,64,0,0,22.1,1.22,Summer,Weekend,52.2,Mild,1
+165,21,Female,Sales,27.6,USA,5.15,3.5,19.0,22.2,24,1,40,0.0,115,1,7170,70,5.7,9.2,Morning,Anxiety,74,0,0,16.9,2.22,Summer,Weekday,52.6,Mild,0
+166,46,Male,Manager,33.9,France,4.15,3.9,22.2,27.0,22,5,200,0.0,28,1,8235,0,7.0,8.4,Morning,Depression,71,0,0,18.7,1.96,Summer,Weekday,37.5,Severe,0
+167,28,Male,Freelancer,22.6,Germany,9.41,7.9,15.4,21.1,23,1,40,0.0,42,0,7984,0,2.9,6.6,Evening,Healthy,65,0,0,21.4,1.88,Spring,Weekend,74.7,Healthy,1
+168,24,Male,Retired,25.4,Italy,7.85,7.2,19.7,21.1,14,0,0,2.0,74,1,11104,0,2.6,2.0,Neutral,Healthy,57,0,0,19.7,1.36,Winter,Weekday,98.7,Healthy,1
+169,19,Female,Teacher,18.8,India,7.04,6.3,19.8,17.5,28,0,80,0.0,63,0,3179,15,5.9,3.6,Evening,Healthy,78,0,0,18.3,1.69,Summer,Weekend,71.2,Healthy,0
+170,36,Female,Student,21.8,Germany,6.7,6.7,25.6,26.1,12,0,0,0.0,47,1,7752,0,5.3,5.8,Morning,Healthy,76,1,0,23.4,2.44,Summer,Weekday,96.1,Healthy,1
+171,39,Male,Teacher,24.6,India,7.39,7.3,19.0,18.2,13,4,0,4.0,89,1,7286,18,5.1,11.0,Neutral,Healthy,67,1,0,18.8,2.82,Spring,Weekday,87.1,Healthy,1
+172,18,Female,Manager,32.7,Italy,7.12,5.6,21.1,22.0,20,2,0,0.0,153,0,6264,0,4.7,7.7,Neutral,Healthy,65,1,0,18.4,0.76,Autumn,Weekday,69.6,Healthy,0
+173,34,Male,Retired,22.4,India,8.32,7.1,16.0,21.8,12,2,0,0.0,18,0,1512,52,1.6,0.0,Morning,Healthy,74,0,0,20.1,0.77,Spring,Weekday,77.9,Healthy,1
+174,25,Female,Freelancer,27.0,India,6.79,5.6,25.2,22.1,12,3,0,1.0,28,0,683,0,5.4,6.7,Morning,Healthy,68,1,0,21.1,1.03,Autumn,Weekday,82.4,Healthy,0
+175,38,Male,Homemaker,16.7,France,7.58,4.6,19.2,26.7,37,1,40,0.0,117,1,3157,0,4.5,5.3,Evening,Anxiety,66,1,0,18.1,0.4,Autumn,Weekday,80.8,Healthy,1
+176,24,Male,Sales,19.2,USA,8.3,4.5,21.4,25.1,30,3,80,0.0,39,0,8365,30,4.0,5.5,Evening,Anxiety,73,1,0,20.4,-0.34,Spring,Weekend,65.1,Healthy,0
+177,40,Male,Doctor,37.0,Mexico,7.09,6.6,24.2,12.9,23,4,0,0.0,53,0,1690,69,6.8,9.6,Neutral,Healthy,69,1,0,22.5,2.53,Spring,Weekday,84.8,Mild,0
+178,30,Male,Teacher,28.1,India,6.09,3.8,13.8,14.8,19,5,0,1.0,18,0,3379,0,7.2,7.6,Evening,Depression,64,1,0,17.7,1.67,Summer,Weekday,27.5,Moderate,0
+179,54,Male,Freelancer,23.1,Japan,10.02,7.1,21.5,13.2,14,0,0,0.0,31,0,7137,19,3.9,3.9,Neutral,Healthy,70,1,0,20.0,1.95,Autumn,Weekend,81.7,Healthy,1
+180,22,Female,Teacher,19.7,Canada,7.78,7.7,26.7,25.3,23,2,80,0.0,74,1,9211,0,5.7,4.3,Neutral,Healthy,75,1,0,21.6,2.73,Spring,Weekday,97.2,Healthy,0
+181,28,Male,Manager,23.7,Australia,4.19,3.7,12.8,29.3,15,4,0,0.0,30,1,9008,82,5.6,7.4,Neutral,Healthy,65,1,0,18.6,0.39,Summer,Weekday,42.0,Mild,0
+182,22,Female,Teacher,27.7,France,6.71,3.6,20.1,24.9,11,5,0,0.0,142,1,6600,59,6.7,6.6,Neutral,Anxiety,73,0,0,19.6,0.74,Spring,Weekday,58.9,Mild,0
+183,52,Female,Student,31.6,Australia,4.34,2.0,20.4,14.7,26,7,0,0.0,76,0,6392,0,7.3,5.7,Evening,Depression,68,1,0,19.7,2.33,Spring,Weekend,12.8,Severe,0
+184,49,Male,Doctor,24.5,UK,7.05,5.9,19.9,15.1,12,2,100,0.0,25,0,10997,0,4.4,7.7,Neutral,Healthy,53,0,0,15.8,0.82,Summer,Weekend,77.8,Healthy,1
+185,26,Female,Student,28.9,India,5.64,5.0,16.4,13.2,18,4,0,3.0,42,0,6005,51,6.3,3.5,Neutral,Healthy,67,0,0,18.0,2.31,Winter,Weekday,26.4,Mild,1
+186,39,Female,Freelancer,27.1,Canada,10.5,4.0,22.7,19.4,37,6,0,3.0,55,0,2788,31,4.5,4.5,Evening,Both,64,1,0,19.5,0.79,Summer,Weekend,43.6,Severe,1
+187,45,Female,Freelancer,20.1,Brazil,6.43,4.9,20.6,20.3,18,3,0,2.0,62,0,5050,83,6.2,8.7,Neutral,Anxiety,68,0,0,18.7,1.67,Autumn,Weekday,61.2,Healthy,0
+188,35,Female,Lawyer,30.9,Brazil,6.33,5.8,23.7,23.4,21,4,0,0.0,92,0,7395,0,6.7,12.4,Neutral,Healthy,71,1,0,17.8,0.04,Summer,Weekday,60.6,Mild,0
+189,34,Female,Nurse,28.7,France,4.1,2.9,20.7,20.8,17,5,40,0.0,52,0,7253,0,8.7,10.9,Neutral,Healthy,72,0,1,19.4,0.51,Autumn,Weekday,8.8,Mild,0
+190,25,Female,Nurse,40.2,Mexico,8.29,6.8,22.9,27.2,16,1,0,0.0,38,0,1954,32,4.4,7.8,Neutral,Healthy,73,1,0,21.7,2.27,Autumn,Weekend,90.8,Healthy,1
+191,21,Female,Software Engineer,26.1,India,6.32,5.0,19.6,23.0,18,5,0,0.0,48,1,7204,0,3.6,9.0,Neutral,Healthy,50,0,0,24.1,1.37,Summer,Weekday,78.3,Healthy,1
+192,50,Female,Driver,20.2,Brazil,6.28,3.9,18.3,18.2,14,2,0,2.0,13,1,9761,50,6.2,5.4,Neutral,Both,70,0,0,26.8,1.59,Spring,Weekday,39.4,Mild,0
+193,50,Female,Student,28.3,USA,6.02,4.5,21.0,18.7,8,2,0,0.0,28,0,9356,0,7.2,7.7,Neutral,Depression,59,0,0,16.4,2.79,Winter,Weekday,46.1,Mild,0
+194,38,Female,Software Engineer,24.0,USA,6.07,5.6,18.9,16.5,35,4,80,2.0,37,0,3915,13,4.9,8.8,Evening,Healthy,61,0,0,21.3,1.63,Spring,Weekday,57.7,Healthy,0
+195,28,Female,Nurse,21.6,Canada,7.19,2.2,16.8,23.4,31,7,0,0.0,48,0,4337,0,8.9,10.6,Evening,Both,81,0,0,22.3,1.66,Spring,Weekday,24.2,Moderate,0
+196,29,Female,Teacher,23.1,India,6.79,5.5,10.0,20.4,15,4,200,3.0,16,0,2221,28,4.4,4.9,Morning,Healthy,77,1,0,22.8,0.43,Winter,Weekday,50.4,Healthy,1
+197,41,Female,Doctor,24.9,USA,4.8,1.7,16.9,20.1,20,2,0,2.0,41,0,6676,24,7.1,10.2,Evening,Anxiety,73,0,0,24.6,1.67,Spring,Weekday,13.3,Mild,0
+198,50,Male,Software Engineer,32.7,Brazil,6.13,6.8,21.0,15.4,15,4,80,0.0,68,0,2545,45,4.6,6.4,Neutral,Healthy,71,0,0,17.1,1.63,Spring,Weekday,66.6,Healthy,0
+199,49,Female,Freelancer,26.9,India,6.59,7.5,23.0,19.1,13,0,0,0.0,27,1,12550,0,5.0,5.0,Neutral,Healthy,67,0,0,20.2,0.67,Spring,Weekday,85.5,Healthy,1
+200,44,Female,Homemaker,20.5,Brazil,8.52,4.8,16.7,24.6,19,4,0,0.0,24,1,4104,48,5.4,2.5,Evening,Healthy,67,1,0,23.1,1.43,Summer,Weekday,76.3,Healthy,0
+201,38,Male,Freelancer,27.4,Mexico,6.5,4.6,20.9,17.8,22,4,40,2.0,130,1,10144,0,5.1,9.8,Morning,Anxiety,61,1,0,17.9,0.56,Summer,Weekday,49.6,Mild,0
+202,21,Female,Sales,24.7,Germany,5.52,3.5,19.3,21.0,8,2,0,0.0,18,0,5491,0,6.2,7.6,Morning,Anxiety,61,0,0,22.4,1.23,Spring,Weekday,38.8,Healthy,1
+203,23,Female,Driver,27.9,Mexico,5.91,3.5,25.5,27.8,30,6,0,0.0,26,0,6033,0,7.0,6.3,Evening,Healthy,73,1,0,18.5,0.51,Summer,Weekday,58.3,Mild,0
+204,50,Female,Student,29.7,Germany,5.34,4.6,19.6,15.9,24,0,0,2.0,58,0,8095,37,6.3,5.8,Evening,Healthy,63,1,0,22.0,1.45,Summer,Weekday,46.0,Mild,1
+205,37,Male,Doctor,34.7,India,5.46,4.3,24.9,23.6,20,5,0,0.0,43,1,3483,0,7.3,11.4,Neutral,Anxiety,60,1,0,21.7,1.27,Summer,Weekday,67.0,Moderate,0
+206,18,Female,Student,24.5,Germany,7.28,6.3,19.3,26.8,20,3,0,0.0,55,1,12929,18,4.4,1.2,Morning,Healthy,64,1,0,18.6,1.2,Summer,Weekend,90.3,Healthy,0
+207,21,Male,Nurse,26.6,France,6.06,4.1,26.1,15.1,33,6,0,0.0,130,0,9214,0,8.5,8.7,Evening,Anxiety,68,1,0,15.0,1.64,Autumn,Weekday,55.8,Mild,0
+208,39,Male,Software Engineer,24.7,India,7.64,5.3,24.9,26.3,28,1,0,0.0,157,1,9000,43,6.2,6.7,Neutral,Anxiety,67,1,0,19.0,0.3,Spring,Weekend,90.4,Healthy,1
+209,18,Male,Nurse,26.9,India,4.9,4.3,12.7,20.5,22,2,0,4.0,46,1,8715,0,7.5,10.3,Evening,Healthy,69,0,0,19.0,1.47,Summer,Weekday,39.7,Mild,0
+210,23,Female,Doctor,24.9,Canada,6.55,6.0,21.6,30.0,9,2,100,0.0,46,0,6406,71,6.5,12.3,Morning,Healthy,63,1,0,20.6,0.99,Summer,Weekday,73.0,Healthy,1
+211,35,Female,Manager,27.6,Germany,5.77,3.0,17.7,23.7,17,4,40,3.0,47,1,6526,0,6.6,7.1,Morning,Anxiety,81,0,0,18.8,-0.03,Autumn,Weekday,38.9,Mild,0
+212,40,Male,Nurse,25.4,Brazil,6.85,5.1,18.7,16.5,17,2,0,5.0,26,1,5545,19,5.6,11.6,Neutral,Healthy,66,0,0,22.2,0.94,Spring,Weekday,53.0,Healthy,1
+213,38,Male,Sales,25.0,UK,8.84,7.0,19.6,18.3,14,4,0,1.0,16,0,1940,0,5.0,6.5,Morning,Healthy,70,0,0,22.2,2.49,Autumn,Weekend,70.9,Healthy,1
+214,25,Male,Sales,23.9,India,4.55,4.6,20.2,20.2,16,2,80,0.0,64,0,3789,0,7.1,6.1,Morning,Healthy,62,1,0,24.7,0.87,Spring,Weekday,50.7,Mild,0
+215,41,Male,Freelancer,19.2,USA,7.6,4.6,17.3,21.6,10,8,0,2.0,68,1,14766,0,6.4,5.0,Neutral,Depression,66,1,0,19.1,2.38,Autumn,Weekday,41.2,Mild,0
+216,25,Female,Software Engineer,31.0,India,5.19,3.4,21.0,17.3,17,1,0,0.0,114,1,9236,0,6.3,8.9,Neutral,Healthy,74,0,0,23.0,2.01,Summer,Weekday,57.0,Mild,0
+217,28,Female,Retired,25.0,Australia,7.01,5.0,23.0,26.4,12,2,100,4.0,31,1,12024,35,4.4,1.3,Neutral,Anxiety,65,0,0,21.1,1.13,Summer,Weekday,69.7,Healthy,1
+218,42,Female,Freelancer,30.8,Canada,5.72,4.2,27.0,20.0,16,3,0,0.0,27,1,5025,56,5.9,6.2,Morning,Anxiety,74,0,0,18.8,2.61,Spring,Weekday,62.5,Mild,1
+219,38,Male,Student,17.1,USA,7.04,5.6,20.9,21.8,19,3,0,0.0,27,1,10534,0,6.9,3.8,Neutral,Healthy,73,1,1,23.7,2.02,Autumn,Weekend,83.5,Healthy,1
+220,47,Male,Student,22.6,South Korea,6.26,5.2,20.1,25.4,23,6,0,0.0,31,1,9422,0,6.3,4.0,Neutral,Healthy,77,1,0,21.1,-0.01,Spring,Weekday,73.2,Healthy,1
+221,39,Female,Software Engineer,20.1,Japan,7.47,5.5,30.0,25.7,11,5,0,0.0,35,1,6658,0,5.5,7.4,Neutral,Healthy,60,1,0,15.6,-0.05,Summer,Weekday,100.0,Healthy,1
+222,36,Female,Software Engineer,22.7,Japan,6.56,6.6,22.0,20.4,7,1,0,0.0,53,0,5952,0,3.5,12.9,Morning,Healthy,72,1,0,19.8,2.07,Spring,Weekday,87.0,Healthy,1
+223,21,Male,Doctor,32.0,India,7.7,6.7,18.8,23.3,6,0,0,0.0,14,0,4772,37,4.8,8.5,Morning,Healthy,80,1,0,17.2,1.4,Winter,Weekend,77.0,Healthy,1
+224,29,Female,Homemaker,25.4,USA,7.77,6.3,22.0,19.6,19,1,0,0.0,132,0,7881,0,6.6,7.2,Neutral,Healthy,70,0,0,20.0,1.18,Summer,Weekday,82.5,Healthy,1
+225,26,Male,Nurse,25.8,France,7.32,6.0,19.2,30.0,22,0,0,0.0,25,0,3036,0,4.9,9.4,Morning,Healthy,65,1,0,19.5,1.34,Spring,Weekend,74.9,Healthy,1
+226,26,Female,Doctor,24.7,France,5.6,5.0,25.6,30.0,9,3,0,0.0,80,1,7956,54,5.6,13.8,Neutral,Healthy,67,0,0,19.6,0.75,Summer,Weekday,78.3,Healthy,1
+227,59,Male,Manager,27.9,Brazil,5.31,2.7,21.6,16.9,12,6,0,0.0,40,1,14035,0,6.7,9.3,Neutral,Anxiety,71,0,1,23.0,1.39,Spring,Weekday,31.7,Moderate,0
+228,30,Female,Lawyer,28.3,Canada,5.1,2.9,20.4,19.2,26,6,0,0.0,144,1,5714,15,7.4,9.7,Neutral,Anxiety,68,1,0,18.3,0.75,Winter,Weekday,28.8,Moderate,0
+229,50,Male,Freelancer,28.5,Spain,6.61,4.2,21.0,23.0,23,3,0,0.0,96,1,10860,0,6.5,5.2,Morning,Depression,59,1,0,22.0,1.2,Summer,Weekday,66.8,Mild,0
+230,38,Female,Retired,25.5,Germany,8.27,8.3,16.7,18.7,13,4,40,0.0,16,0,3243,60,1.3,0.0,Morning,Healthy,71,1,0,21.0,1.4,Summer,Weekend,91.6,Healthy,1
+231,44,Male,Doctor,28.8,USA,6.58,6.0,24.3,17.5,12,4,0,0.0,41,0,7268,0,6.3,11.8,Neutral,Healthy,62,1,0,24.4,0.79,Summer,Weekday,67.5,Healthy,1
+232,33,Male,Retired,24.5,USA,9.49,4.2,17.6,25.5,16,2,80,0.0,28,0,2437,60,5.3,4.1,Neutral,Both,76,1,0,28.0,2.12,Spring,Weekday,38.4,Mild,0
+233,36,Male,Teacher,30.0,Italy,6.35,5.6,20.5,21.3,20,2,100,0.0,116,0,4799,0,5.7,5.6,Neutral,Healthy,61,1,0,20.7,2.41,Autumn,Weekday,64.6,Healthy,0
+234,33,Male,Student,22.4,India,7.75,6.3,19.4,17.1,24,1,0,0.0,94,0,7376,0,6.3,6.5,Neutral,Depression,69,1,0,19.2,1.94,Summer,Weekday,64.6,Healthy,1
+235,24,Female,Software Engineer,26.6,South Korea,8.09,6.9,24.3,27.8,28,2,0,0.0,155,0,5009,0,4.8,7.2,Evening,Healthy,69,0,0,17.7,2.9,Summer,Weekend,90.2,Healthy,0
+236,41,Male,Student,28.2,USA,5.52,4.1,21.1,15.8,34,6,200,1.0,141,0,11609,0,4.6,2.7,Neutral,Healthy,55,0,1,20.4,2.37,Summer,Weekend,51.6,Mild,0
+237,27,Female,Software Engineer,19.2,France,7.44,5.8,19.5,22.4,19,3,0,0.0,95,0,4676,0,6.0,4.1,Morning,Healthy,62,1,0,19.4,0.47,Winter,Weekend,72.8,Healthy,0
+238,18,Female,Software Engineer,24.0,UK,6.86,7.5,20.0,28.5,15,2,0,0.0,54,1,17951,0,2.3,4.0,Morning,Healthy,69,1,0,22.1,0.12,Summer,Weekend,100.0,Healthy,1
+239,38,Female,Teacher,29.5,USA,6.68,5.4,17.8,11.5,17,3,0,1.0,67,0,6940,0,6.0,11.1,Morning,Healthy,72,1,0,21.3,1.69,Spring,Weekday,46.7,Healthy,1
+240,24,Female,Sales,22.2,Japan,7.02,4.7,18.5,18.3,23,1,0,0.0,53,0,5768,0,5.9,6.7,Evening,Depression,72,0,0,20.3,0.4,Autumn,Weekend,48.9,Healthy,1
+241,54,Female,Nurse,24.4,Brazil,7.05,5.6,22.9,20.4,16,3,0,0.0,19,1,12215,0,8.2,10.8,Morning,Healthy,73,0,0,18.6,1.29,Winter,Weekend,78.9,Healthy,0
+242,56,Female,Driver,33.2,France,5.16,1.0,18.7,14.2,21,3,0,0.0,67,0,12371,32,6.6,10.0,Neutral,Anxiety,65,1,1,24.0,0.82,Autumn,Weekday,3.7,Severe,0
+243,52,Female,Nurse,23.2,Germany,5.34,3.2,17.2,15.9,23,5,0,0.0,40,0,2315,0,8.8,9.3,Neutral,Healthy,62,0,1,23.9,1.86,Summer,Weekday,31.9,Mild,0
+244,29,Male,Student,27.6,India,4.95,5.0,16.9,23.8,25,1,0,0.0,139,1,10577,0,6.5,3.9,Evening,Anxiety,71,1,0,19.1,0.91,Autumn,Weekday,50.8,Mild,0
+245,18,Female,Software Engineer,18.6,France,8.73,5.9,23.5,25.7,24,3,0,0.0,148,0,5960,14,4.3,8.0,Evening,Healthy,70,0,0,23.8,0.8,Summer,Weekend,82.6,Healthy,1
+246,53,Male,Student,21.1,USA,5.58,3.2,22.4,22.4,20,3,0,0.0,148,1,8088,0,6.3,5.2,Neutral,Depression,62,0,0,20.5,1.14,Summer,Weekday,51.7,Mild,0
+247,31,Female,Doctor,21.5,India,4.72,3.8,13.3,16.8,37,3,0,0.0,180,0,6346,0,7.7,15.3,Evening,Healthy,63,0,0,20.4,1.9,Summer,Weekday,30.8,Mild,0
+248,58,Female,Student,39.6,India,5.59,5.3,24.3,17.9,22,3,100,0.0,82,0,7458,0,5.8,6.5,Morning,Healthy,64,0,0,21.1,2.7,Winter,Weekday,54.3,Mild,0
+249,57,Male,Sales,27.2,Australia,6.3,4.6,21.3,18.2,19,4,0,0.0,31,1,12898,0,5.3,7.3,Evening,Anxiety,70,0,0,26.3,0.44,Autumn,Weekday,71.4,Mild,0
+250,47,Female,Doctor,21.9,India,6.58,3.1,15.6,17.9,11,4,0,0.0,63,0,4402,11,6.9,10.9,Morning,Depression,77,1,0,18.7,1.79,Spring,Weekday,33.1,Mild,0
+251,27,Female,Software Engineer,25.8,Japan,7.56,6.4,19.8,23.4,20,1,0,0.0,107,0,3209,0,4.2,10.3,Neutral,Healthy,77,1,0,24.9,1.08,Spring,Weekend,75.0,Healthy,1
+252,30,Female,Sales,24.9,Netherlands,5.67,2.9,23.9,19.1,42,6,0,0.0,173,0,6427,61,5.4,7.9,Evening,Healthy,72,1,0,20.8,0.66,Summer,Weekday,45.4,Mild,0
+253,47,Male,Lawyer,26.1,India,3.66,1.1,16.3,19.3,26,4,80,0.0,50,0,5098,46,9.0,10.6,Neutral,Depression,65,1,1,16.8,1.91,Summer,Weekend,0.0,Severe,0
+254,27,Male,Freelancer,25.3,Germany,7.85,6.1,24.1,20.9,10,4,0,0.0,52,0,7786,0,4.7,5.5,Neutral,Healthy,67,1,0,23.5,1.86,Spring,Weekday,76.7,Healthy,1
+255,23,Female,Doctor,22.0,USA,5.42,4.0,20.9,11.0,26,3,0,0.0,108,0,4737,19,7.1,10.0,Morning,Healthy,69,1,0,22.7,1.46,Autumn,Weekday,43.4,Mild,0
+256,35,Female,Doctor,40.6,Brazil,6.76,5.1,17.7,17.2,7,3,0,0.0,15,0,500,0,5.5,8.6,Morning,Healthy,64,0,0,19.7,0.42,Winter,Weekday,53.7,Healthy,0
+257,54,Male,Doctor,30.9,Brazil,6.52,4.8,20.4,19.8,25,4,40,0.0,13,0,7282,0,5.1,13.9,Evening,Healthy,69,1,0,21.1,0.51,Autumn,Weekday,60.5,Mild,0
+258,40,Female,Teacher,22.5,Japan,6.68,6.3,17.3,15.9,12,4,0,0.0,122,0,6661,0,5.7,7.4,Neutral,Healthy,69,0,0,20.1,3.0,Summer,Weekday,56.3,Healthy,1
+259,36,Female,Nurse,32.2,Sweden,7.37,6.8,22.2,26.7,13,5,0,1.0,17,1,9280,35,3.1,6.4,Neutral,Healthy,60,0,0,18.6,1.92,Autumn,Weekday,92.4,Healthy,1
+260,21,Female,Software Engineer,27.6,Sweden,7.61,6.3,16.0,20.9,22,1,0,0.0,13,1,7347,0,5.1,7.5,Evening,Healthy,55,0,0,25.1,0.31,Summer,Weekend,82.0,Healthy,1
+261,37,Female,Freelancer,26.7,Mexico,6.92,4.6,20.6,18.5,26,2,0,0.0,12,0,6796,33,5.8,8.5,Neutral,Anxiety,60,1,0,21.9,1.47,Autumn,Weekday,63.7,Healthy,1
+262,63,Female,Software Engineer,31.1,Brazil,6.03,4.6,25.0,16.4,29,3,0,0.0,63,1,10556,28,6.5,12.5,Neutral,Anxiety,54,1,0,17.0,0.89,Spring,Weekday,62.5,Mild,0
+263,22,Female,Student,27.7,USA,5.11,3.9,14.3,23.4,29,5,0,0.0,26,0,9445,0,6.3,6.3,Evening,Healthy,67,0,0,25.8,0.42,Summer,Weekday,48.2,Moderate,0
+264,34,Male,Software Engineer,22.6,USA,7.19,6.7,23.0,19.5,18,1,0,0.0,80,0,9148,0,5.4,9.5,Neutral,Healthy,66,1,0,22.3,2.03,Summer,Weekday,78.8,Healthy,1
+265,49,Male,Nurse,28.0,USA,3.75,3.0,15.9,20.7,32,5,0,0.0,146,0,8917,22,7.2,9.7,Neutral,Healthy,58,1,0,17.6,1.15,Autumn,Weekday,19.7,Moderate,0
+266,42,Female,Software Engineer,30.0,UK,6.03,6.7,22.6,18.5,19,0,0,0.0,138,0,10754,52,4.6,10.1,Neutral,Healthy,75,1,0,20.1,0.72,Winter,Weekday,65.7,Healthy,1
+267,40,Male,Freelancer,23.4,USA,6.69,4.6,16.8,21.3,21,4,0,3.0,130,0,6514,0,6.1,7.5,Neutral,Healthy,63,0,0,19.1,0.54,Summer,Weekday,47.1,Healthy,1
+268,40,Male,Freelancer,26.9,Brazil,7.69,7.4,14.4,20.3,13,2,0,0.0,30,1,8091,28,2.9,7.3,Morning,Healthy,69,1,0,23.6,-1.0,Spring,Weekday,78.2,Healthy,1
+269,29,Female,Nurse,17.1,UK,5.05,3.2,19.5,24.2,20,3,0,0.0,52,1,6779,0,8.3,8.2,Neutral,Healthy,65,0,1,16.2,1.72,Summer,Weekday,42.3,Mild,0
+270,27,Female,Software Engineer,18.0,India,5.36,2.6,17.5,19.9,25,5,0,1.0,71,0,6815,0,5.0,7.9,Neutral,Anxiety,63,0,1,17.6,1.79,Spring,Weekend,35.0,Moderate,0
+271,45,Male,Nurse,28.0,USA,6.51,5.2,23.0,21.6,18,0,0,0.0,43,1,10394,0,7.3,8.2,Morning,Anxiety,62,1,0,20.8,1.19,Autumn,Weekend,62.1,Healthy,1
+272,45,Male,Manager,30.8,Brazil,6.46,5.5,21.9,20.0,20,5,200,0.0,42,0,10240,0,3.7,5.8,Evening,Healthy,65,1,0,28.0,2.14,Autumn,Weekend,66.9,Healthy,1
+273,48,Male,Software Engineer,25.3,USA,5.58,4.8,20.1,12.6,21,3,0,1.0,104,1,8064,7,6.3,5.8,Evening,Healthy,64,1,0,20.8,0.55,Autumn,Weekday,51.0,Healthy,0
+274,51,Male,Sales,32.0,India,7.2,4.2,23.5,20.0,34,8,150,0.0,85,1,10669,43,6.8,3.8,Evening,Healthy,67,1,0,23.7,0.73,Spring,Weekend,70.4,Mild,1
+275,34,Male,Software Engineer,37.9,UK,5.84,5.7,22.1,20.7,16,3,40,0.0,60,0,3586,0,4.7,10.2,Neutral,Healthy,62,0,0,22.3,1.15,Autumn,Weekday,66.4,Healthy,1
+276,33,Male,Student,24.8,Spain,4.93,1.8,16.2,21.6,34,4,80,2.0,91,0,7847,24,7.9,3.1,Evening,Anxiety,66,0,1,26.4,2.68,Spring,Weekday,9.5,Severe,0
+277,44,Female,Student,24.7,USA,6.13,5.8,21.4,19.4,6,1,0,0.0,158,1,17060,0,4.7,3.2,Neutral,Healthy,62,1,0,22.1,0.92,Winter,Weekday,81.0,Healthy,1
+278,38,Female,Nurse,16.0,UK,4.01,1.4,16.8,11.2,23,7,0,0.0,168,0,5909,37,8.0,9.5,Neutral,Depression,71,0,1,19.3,2.06,Spring,Weekday,0.0,Severe,0
+279,40,Female,Sales,29.7,USA,6.58,6.1,18.6,25.1,9,3,40,1.0,37,0,4361,12,6.3,10.0,Morning,Healthy,70,0,0,16.7,1.5,Winter,Weekday,49.9,Healthy,0
+280,44,Male,Doctor,25.2,Germany,4.29,5.0,16.9,16.7,4,2,0,0.0,15,0,5617,0,7.5,13.9,Morning,Healthy,68,1,0,17.5,2.48,Autumn,Weekday,39.4,Mild,0
+281,50,Female,Homemaker,32.1,India,7.23,6.7,22.5,22.4,28,5,80,1.0,20,0,5939,0,3.3,5.3,Evening,Healthy,71,1,0,26.5,0.4,Spring,Weekday,82.5,Healthy,1
+282,28,Female,Student,28.7,Germany,6.51,2.2,19.6,17.8,22,5,150,3.0,78,0,5172,28,7.0,6.3,Morning,Both,61,0,0,22.0,1.52,Autumn,Weekday,31.9,Moderate,0
+283,29,Male,Sales,25.2,UK,5.74,3.0,19.3,17.9,25,3,150,0.0,66,1,7630,24,5.4,8.8,Neutral,Healthy,55,1,0,17.9,2.2,Winter,Weekday,53.2,Healthy,0
+284,21,Female,Retired,26.0,Mexico,7.79,6.3,20.9,25.9,25,3,0,0.0,23,0,2522,11,2.7,0.0,Evening,Healthy,68,1,0,19.6,0.68,Winter,Weekend,81.6,Healthy,1
+285,36,Male,Software Engineer,27.8,India,6.77,3.6,18.1,21.9,22,8,0,0.0,23,1,4354,70,6.7,5.6,Neutral,Healthy,72,1,0,22.1,0.33,Autumn,Weekend,53.9,Healthy,0
+286,19,Male,Teacher,29.7,Italy,8.17,4.9,18.2,24.9,21,4,80,0.0,63,1,12037,0,7.7,6.2,Morning,Depression,71,1,0,21.9,1.22,Summer,Weekday,63.9,Mild,0
+287,32,Female,Teacher,28.3,South Korea,6.2,4.8,15.6,17.3,31,4,0,0.0,38,0,500,0,7.8,9.2,Evening,Healthy,60,1,0,16.0,-0.45,Winter,Weekday,54.9,Mild,1
+288,35,Male,Nurse,26.9,India,3.99,4.3,21.1,19.6,16,3,0,1.0,94,0,11651,31,6.5,10.1,Morning,Healthy,61,1,0,26.4,1.48,Summer,Weekday,31.9,Healthy,0
+289,27,Male,Software Engineer,22.8,France,6.78,5.5,24.6,22.6,29,1,0,0.0,50,1,11131,0,5.8,5.4,Evening,Healthy,72,1,0,24.3,0.06,Winter,Weekend,73.5,Healthy,0
+290,36,Female,Student,24.1,South Korea,6.93,5.5,19.8,21.5,15,4,0,0.0,30,1,11813,61,5.5,4.5,Morning,Healthy,67,1,0,23.8,0.15,Autumn,Weekday,69.2,Healthy,0
+291,19,Other,Student,20.9,Canada,5.32,3.5,20.4,28.7,16,5,0,0.0,58,1,9458,0,7.0,7.1,Neutral,Anxiety,61,1,0,22.7,1.03,Autumn,Weekday,35.1,Mild,0
+292,19,Female,Student,16.0,Canada,5.26,5.1,23.9,29.2,18,1,0,0.0,166,1,13096,0,5.4,6.6,Morning,Healthy,59,1,0,19.1,1.98,Autumn,Weekday,73.8,Healthy,0
+293,46,Male,Software Engineer,26.2,Italy,6.66,6.4,18.2,24.3,24,3,0,0.0,122,1,12884,34,4.7,11.4,Neutral,Healthy,66,1,0,19.8,1.14,Autumn,Weekday,78.8,Healthy,0
+294,29,Female,Freelancer,24.8,India,5.05,3.8,23.3,18.6,34,3,400,2.0,23,1,6700,32,6.1,7.4,Neutral,Healthy,66,1,0,17.1,1.95,Spring,Weekday,38.5,Mild,0
+295,22,Male,Nurse,29.0,Australia,3.87,4.8,23.8,24.8,23,4,0,0.0,66,1,8853,44,6.0,12.4,Neutral,Healthy,66,0,0,22.4,2.02,Winter,Weekday,56.2,Mild,0
+296,34,Male,Lawyer,19.6,Netherlands,4.87,2.5,12.9,18.3,21,1,100,0.0,33,0,2364,76,8.6,9.5,Neutral,Healthy,71,0,0,23.8,1.34,Spring,Weekday,25.9,Mild,0
+297,43,Female,Freelancer,23.1,Germany,8.42,6.5,18.2,16.3,14,1,0,1.0,21,0,1523,0,4.7,2.6,Neutral,Healthy,56,1,0,23.1,2.22,Winter,Weekend,68.2,Healthy,1
+298,25,Male,Nurse,29.7,USA,6.58,4.7,19.8,28.4,26,2,0,3.0,29,1,12364,0,6.0,8.9,Evening,Anxiety,54,1,0,22.3,1.85,Autumn,Weekend,84.9,Mild,1
+299,37,Female,Student,23.2,USA,5.65,4.4,17.6,19.5,33,1,0,1.0,131,0,2484,0,4.8,0.9,Evening,Healthy,61,0,0,22.9,-0.08,Summer,Weekend,59.5,Healthy,0
+300,21,Female,Driver,32.3,UK,7.02,7.3,21.0,20.3,16,3,0,0.0,31,1,6649,42,5.5,6.9,Neutral,Healthy,68,1,0,22.1,0.61,Winter,Weekend,87.3,Healthy,1
+301,20,Male,Doctor,30.3,India,7.32,6.7,19.3,23.3,18,2,0,0.0,37,0,3026,0,6.8,6.9,Evening,Healthy,66,0,0,17.8,1.37,Winter,Weekend,83.8,Healthy,1
+302,34,Female,Driver,33.8,Brazil,5.31,3.9,18.3,25.0,15,2,40,0.0,76,1,11965,0,5.4,5.5,Neutral,Healthy,72,1,0,15.0,-0.3,Autumn,Weekday,54.9,Mild,1
+303,35,Female,Manager,28.8,Italy,6.39,5.1,21.0,16.0,29,2,150,0.0,23,0,8872,0,5.2,10.4,Evening,Healthy,68,0,0,24.1,1.3,Winter,Weekday,60.8,Healthy,1
+304,38,Male,Retired,31.6,Germany,8.5,6.2,22.9,16.5,10,5,0,0.0,29,1,6235,0,4.3,0.0,Morning,Healthy,68,1,0,19.9,1.67,Autumn,Weekday,87.0,Healthy,1
+305,41,Female,Student,28.9,USA,7.92,4.3,16.3,20.3,18,5,0,0.0,14,1,9214,50,5.7,1.5,Morning,Depression,77,0,0,22.8,0.7,Winter,Weekend,61.1,Mild,1
+306,59,Female,Student,24.6,USA,5.15,3.2,17.3,8.4,17,2,0,0.0,93,1,8491,0,5.4,4.4,Morning,Anxiety,62,0,0,16.7,1.8,Spring,Weekday,34.1,Mild,1
+307,34,Female,Student,22.4,India,8.19,6.3,21.5,26.1,17,2,0,2.0,67,1,6131,38,4.3,5.2,Evening,Anxiety,68,0,0,20.0,2.08,Spring,Weekend,74.1,Healthy,1
+308,28,Female,Retired,33.4,South Korea,7.52,7.6,19.2,14.1,15,2,0,2.0,13,0,3760,0,1.0,1.6,Evening,Healthy,64,0,0,17.2,0.66,Autumn,Weekday,88.2,Healthy,1
+309,44,Female,Doctor,26.7,Mexico,5.17,4.5,18.0,15.7,15,4,0,1.0,11,0,2245,0,8.0,12.5,Evening,Healthy,74,0,0,21.6,0.88,Spring,Weekday,31.5,Mild,0
+310,26,Female,Student,25.5,Japan,6.9,5.6,18.2,24.6,15,3,0,3.0,168,1,11066,56,4.9,2.6,Morning,Healthy,57,1,0,19.2,1.97,Winter,Weekend,70.9,Healthy,1
+311,31,Male,Nurse,33.7,Netherlands,3.77,2.5,11.4,16.2,29,5,0,2.0,29,1,11688,0,7.9,10.7,Evening,Anxiety,55,0,0,19.9,1.96,Winter,Weekday,15.3,Severe,0
+312,20,Female,Student,27.5,Brazil,8.79,6.5,19.3,24.5,15,4,80,1.0,180,0,5153,43,4.9,5.3,Morning,Healthy,60,1,0,19.0,0.85,Summer,Weekend,73.7,Healthy,1
+313,19,Female,Driver,25.1,USA,5.16,4.8,20.5,21.1,6,1,0,0.0,32,1,12412,24,7.2,9.6,Morning,Healthy,72,0,0,19.8,0.65,Autumn,Weekday,58.3,Healthy,0
+314,57,Female,Driver,23.7,Italy,5.41,5.0,25.4,22.8,27,2,40,0.0,180,1,5655,29,5.2,10.3,Morning,Healthy,61,1,0,18.2,0.49,Winter,Weekday,74.3,Mild,0
+315,46,Female,Lawyer,29.6,USA,4.69,3.4,17.0,20.6,33,4,0,2.0,58,0,10502,22,7.2,10.9,Evening,Healthy,65,0,0,22.4,0.91,Autumn,Weekday,24.8,Moderate,0
+316,40,Female,Student,26.9,UK,6.48,4.6,18.4,21.4,21,4,0,0.0,47,0,7808,19,4.6,8.7,Evening,Healthy,59,1,0,26.8,-0.92,Autumn,Weekday,60.4,Healthy,0
+317,30,Male,Driver,22.4,Germany,4.85,2.0,15.9,20.5,16,4,150,0.0,45,1,10630,0,6.2,9.1,Morning,Depression,65,0,0,19.2,1.61,Winter,Weekday,17.4,Mild,0
+318,24,Female,Nurse,33.8,India,6.95,5.3,17.7,22.9,9,3,0,0.0,39,0,11355,0,7.4,9.7,Neutral,Healthy,66,0,0,16.9,1.43,Summer,Weekend,66.7,Healthy,1
+319,23,Female,Driver,24.6,Canada,6.9,6.1,18.1,28.3,15,2,150,0.0,70,1,11040,0,4.9,8.1,Neutral,Healthy,67,1,0,18.3,1.85,Summer,Weekday,89.3,Healthy,1
+320,26,Female,Retired,31.6,India,9.66,6.8,18.5,22.0,14,5,80,0.0,38,1,7368,42,1.0,0.0,Neutral,Healthy,68,1,0,23.7,1.9,Winter,Weekend,78.9,Healthy,0
+321,35,Female,Retired,27.3,Japan,9.22,7.6,19.5,18.9,14,3,80,0.0,40,0,6160,44,1.0,0.6,Morning,Depression,70,1,0,17.0,0.59,Summer,Weekday,69.3,Healthy,1
+322,41,Female,Sales,34.3,India,5.48,4.2,18.9,18.5,22,5,0,0.0,118,0,1872,0,6.3,10.0,Neutral,Healthy,69,0,0,21.2,1.0,Winter,Weekday,38.2,Moderate,0
+323,39,Male,Lawyer,21.1,India,6.96,4.7,24.0,15.9,32,4,0,1.0,92,1,10870,0,7.1,11.1,Evening,Anxiety,66,1,0,23.9,0.18,Summer,Weekend,69.9,Mild,0
+324,26,Female,Manager,26.0,USA,6.15,6.3,18.2,11.7,6,1,0,0.0,35,1,8524,0,6.7,11.5,Morning,Healthy,57,1,0,19.2,0.96,Autumn,Weekday,59.7,Healthy,0
+325,56,Female,Homemaker,29.2,UK,5.96,4.6,23.8,17.0,17,4,200,0.0,118,1,13399,0,4.2,3.4,Morning,Healthy,61,1,0,22.6,2.15,Summer,Weekday,63.2,Healthy,0
+326,42,Female,Doctor,30.9,Brazil,5.53,3.1,17.6,17.9,9,5,0,0.0,35,0,3843,43,6.4,8.7,Morning,Healthy,69,1,0,23.9,0.93,Winter,Weekday,35.9,Mild,0
+327,35,Male,Software Engineer,19.6,USA,4.19,1.7,18.9,21.3,33,1,0,0.0,97,1,13531,0,6.6,9.9,Evening,Depression,68,0,0,15.0,2.43,Spring,Weekday,27.8,Moderate,0
+328,37,Female,Student,22.9,Mexico,5.02,4.9,19.9,15.8,21,1,80,0.0,71,1,10357,0,7.1,3.5,Neutral,Healthy,62,0,0,20.1,1.25,Spring,Weekday,47.3,Mild,0
+329,31,Male,Student,32.0,Japan,5.57,5.8,25.6,27.3,18,4,0,0.0,14,1,8437,21,6.0,1.5,Neutral,Healthy,68,0,0,20.7,-0.3,Autumn,Weekday,85.0,Mild,0
+330,26,Male,Software Engineer,22.0,India,6.09,5.8,21.4,27.2,29,3,0,1.0,69,1,5187,5,6.6,7.4,Evening,Healthy,67,0,0,18.5,0.71,Autumn,Weekday,76.4,Healthy,0
+331,29,Male,Software Engineer,24.6,India,9.02,6.0,23.3,18.1,16,7,0,2.0,34,1,4938,7,3.6,5.8,Morning,Healthy,64,0,0,21.8,1.46,Autumn,Weekend,82.6,Healthy,1
+332,43,Female,Freelancer,21.7,Japan,7.24,5.9,23.6,10.2,17,5,0,0.0,34,0,2928,39,5.0,8.9,Neutral,Healthy,71,0,0,17.8,2.82,Spring,Weekday,69.7,Healthy,0
+333,18,Male,Software Engineer,25.2,USA,4.46,4.0,21.3,22.4,21,2,0,0.0,9,0,4042,27,7.1,11.9,Neutral,Anxiety,64,1,0,17.8,0.2,Winter,Weekday,38.4,Moderate,0
+334,22,Male,Sales,25.6,USA,6.85,6.4,19.6,21.6,20,1,0,0.0,38,0,5824,0,4.9,6.6,Evening,Healthy,54,1,0,19.6,2.06,Summer,Weekday,72.6,Healthy,0
+335,19,Male,Software Engineer,20.9,Japan,6.28,5.7,26.4,17.9,7,1,0,0.0,58,0,7300,35,5.3,7.8,Neutral,Healthy,74,0,0,23.5,1.67,Spring,Weekday,65.4,Healthy,0
+336,19,Female,Student,25.3,USA,5.43,3.6,23.2,25.1,17,3,0,0.0,38,1,7115,77,7.7,1.4,Neutral,Healthy,64,1,0,23.3,1.36,Summer,Weekday,68.4,Mild,0
+337,47,Male,Lawyer,16.0,South Korea,7.31,7.3,27.7,21.0,30,2,0,0.0,99,1,9497,5,6.8,10.1,Evening,Healthy,66,0,0,19.0,0.3,Autumn,Weekend,100.0,Healthy,1
+338,40,Male,Nurse,22.9,South Korea,5.86,4.4,17.1,15.2,24,1,40,0.0,65,0,6044,32,5.8,8.3,Neutral,Healthy,61,0,0,17.3,2.64,Spring,Weekday,47.8,Healthy,1
+339,33,Male,Sales,19.0,Mexico,6.52,5.5,21.8,22.9,17,3,0,0.0,112,0,5109,0,3.6,7.5,Neutral,Healthy,71,0,0,25.6,0.7,Autumn,Weekday,71.1,Healthy,1
+340,21,Female,Doctor,32.6,Netherlands,7.06,6.7,19.4,21.3,19,4,0,0.0,42,0,12127,31,6.1,10.0,Neutral,Healthy,65,1,0,20.2,1.75,Winter,Weekday,76.3,Healthy,1
+341,33,Female,Nurse,30.7,USA,7.93,6.2,20.2,16.1,19,4,0,0.0,11,1,11666,0,6.4,8.4,Neutral,Anxiety,75,1,0,20.3,1.23,Winter,Weekend,81.1,Mild,1
+342,33,Female,Freelancer,24.4,Canada,7.78,6.6,20.7,22.9,28,0,0,0.0,109,1,13028,0,4.4,8.5,Evening,Healthy,67,1,0,15.0,0.43,Summer,Weekday,91.4,Healthy,1
+343,23,Female,Retired,25.5,Netherlands,7.59,7.0,24.6,24.8,4,3,0,0.0,35,1,6669,0,2.2,3.1,Morning,Healthy,55,0,0,24.8,0.2,Spring,Weekday,94.7,Healthy,1
+344,31,Female,Manager,27.3,Japan,5.65,3.0,17.5,20.8,16,1,0,1.0,47,1,12409,41,6.0,8.9,Neutral,Healthy,69,1,0,17.9,1.39,Winter,Weekday,52.7,Healthy,0
+345,30,Male,Nurse,17.1,Germany,4.7,3.9,20.3,18.1,23,1,100,0.0,45,0,11313,0,7.1,9.7,Neutral,Healthy,74,0,0,15.5,0.19,Spring,Weekday,46.5,Mild,1
+346,37,Female,Teacher,32.1,Italy,7.78,5.1,20.1,13.6,19,8,0,0.0,92,1,6462,25,5.9,5.9,Morning,Healthy,62,0,0,21.3,2.39,Autumn,Weekend,75.7,Healthy,0
+347,38,Male,Software Engineer,23.5,USA,5.78,4.2,19.2,23.8,14,4,0,0.0,97,0,2102,83,4.8,9.0,Morning,Healthy,59,1,0,23.9,2.63,Spring,Weekday,62.4,Healthy,0
+348,19,Female,Teacher,24.5,Japan,7.03,5.5,16.2,21.9,26,2,0,0.0,74,0,3363,25,3.8,9.4,Evening,Healthy,51,1,0,19.9,1.67,Spring,Weekday,67.9,Healthy,1
+349,29,Female,Student,26.6,Brazil,4.36,2.3,20.5,25.4,31,6,0,0.0,180,1,10161,0,5.9,7.8,Neutral,Depression,59,0,0,23.9,2.21,Autumn,Weekday,28.2,Severe,0
+350,38,Female,Teacher,23.5,India,5.74,5.3,24.0,25.8,11,1,0,0.0,27,1,12290,37,5.3,11.7,Morning,Healthy,70,0,0,19.0,1.59,Spring,Weekday,83.9,Healthy,1
+351,33,Female,Teacher,20.8,Canada,6.07,3.4,21.0,23.0,19,3,0,0.0,77,1,10113,0,9.0,9.6,Morning,Anxiety,63,0,0,15.3,-0.63,Summer,Weekday,45.4,Mild,0
+352,47,Male,Software Engineer,23.1,Brazil,4.86,2.1,17.7,10.0,23,5,0,0.0,87,0,5688,0,7.3,7.1,Neutral,Anxiety,63,1,0,21.5,1.26,Summer,Weekday,18.4,Moderate,0
+353,39,Female,Retired,23.9,France,9.72,5.7,16.2,27.1,24,1,80,2.0,7,1,2962,60,3.2,0.0,Neutral,Depression,69,1,0,23.9,1.75,Autumn,Weekday,54.8,Healthy,0
+354,23,Male,Student,22.5,USA,5.03,2.7,16.8,19.1,23,4,0,2.0,38,0,500,29,5.6,4.6,Evening,Both,78,0,0,23.7,2.24,Winter,Weekday,21.7,Severe,0
+355,20,Female,Retired,25.5,Brazil,7.61,6.8,18.7,25.7,21,1,0,0.0,145,1,10440,45,1.7,0.0,Neutral,Depression,61,1,0,18.4,-0.0,Spring,Weekend,91.7,Healthy,1
+356,38,Other,Nurse,27.1,USA,4.02,3.3,22.3,11.9,27,2,150,0.0,10,0,6471,0,8.4,9.3,Neutral,Healthy,66,1,0,16.3,1.86,Spring,Weekday,14.2,Mild,0
+357,19,Female,Homemaker,30.7,Canada,9.86,5.8,18.2,23.4,12,7,0,0.0,12,1,10853,0,3.3,2.4,Morning,Healthy,77,1,0,20.3,1.67,Winter,Weekend,69.5,Healthy,1
+358,36,Female,Software Engineer,25.0,USA,7.2,7.3,25.7,21.9,27,2,40,0.0,180,1,8213,45,5.1,4.0,Evening,Healthy,55,0,0,22.2,1.59,Autumn,Weekend,94.5,Healthy,1
+359,54,Female,Student,33.1,Australia,6.28,3.6,25.3,12.8,32,5,0,0.0,175,0,4670,38,6.1,0.0,Evening,Depression,70,1,0,16.9,1.93,Autumn,Weekend,58.9,Severe,0
+360,36,Male,Nurse,22.9,France,4.42,2.2,16.1,21.6,23,2,0,0.0,153,0,500,53,10.0,9.2,Neutral,Both,79,0,1,25.0,1.52,Spring,Weekend,4.5,Severe,0
+361,30,Female,Sales,20.8,USA,4.71,3.9,17.4,17.4,22,6,80,1.0,60,0,5280,41,6.2,9.6,Neutral,Healthy,75,0,0,16.3,0.63,Autumn,Weekday,38.1,Mild,0
+362,38,Male,Sales,30.6,India,7.0,6.9,19.8,15.5,12,4,0,3.0,35,0,5998,0,5.1,7.1,Neutral,Anxiety,60,0,0,23.0,2.23,Autumn,Weekend,69.0,Mild,0
+363,32,Male,Teacher,20.4,France,6.16,5.7,22.0,17.7,29,2,100,0.0,180,0,2624,5,4.1,6.5,Evening,Healthy,72,0,0,17.8,0.16,Autumn,Weekday,58.8,Healthy,1
+364,35,Male,Teacher,23.1,UK,7.5,6.3,15.5,20.6,8,2,0,3.0,48,1,9583,37,4.9,8.7,Neutral,Healthy,63,1,0,23.4,0.56,Winter,Weekday,78.3,Healthy,0
+365,54,Female,Doctor,41.8,Brazil,4.74,3.0,17.7,22.9,12,7,0,2.0,31,1,14415,0,5.9,10.5,Neutral,Depression,65,0,0,15.0,1.58,Autumn,Weekday,29.3,Severe,0
+366,30,Male,Homemaker,30.5,Germany,8.59,5.0,24.2,27.6,8,3,0,0.0,36,1,10428,0,5.2,0.0,Neutral,Depression,57,1,0,22.0,1.34,Winter,Weekend,77.0,Mild,1
+367,57,Female,Doctor,35.2,UK,4.93,2.2,23.0,17.3,21,5,0,0.0,45,1,9587,0,8.1,10.9,Neutral,Healthy,57,0,0,21.0,1.5,Winter,Weekday,33.1,Moderate,0
+368,51,Male,Software Engineer,29.0,Japan,6.72,6.9,20.0,21.8,21,2,200,0.0,76,1,10148,26,2.9,5.0,Neutral,Healthy,62,0,0,20.4,1.17,Winter,Weekend,93.3,Healthy,1
+369,24,Male,Teacher,24.7,Canada,6.91,3.8,24.6,23.9,23,3,0,0.0,130,0,3596,0,6.4,8.5,Morning,Both,67,1,0,22.3,-0.02,Spring,Weekday,51.7,Mild,1
+370,20,Female,Retired,25.7,USA,7.85,6.2,18.3,22.3,10,2,0,3.0,18,1,8210,55,2.5,0.0,Morning,Healthy,65,0,0,20.0,0.16,Autumn,Weekend,79.3,Healthy,1
+371,21,Female,Lawyer,31.2,South Korea,7.69,5.1,23.2,30.0,18,3,0,2.0,16,1,12599,31,6.4,13.9,Morning,Anxiety,70,0,0,22.3,1.14,Winter,Weekend,90.5,Mild,1
+372,18,Female,Driver,19.8,Brazil,5.62,3.6,25.9,21.1,30,5,200,0.0,40,1,12077,0,6.4,8.3,Evening,Healthy,70,1,0,23.4,1.85,Spring,Weekday,49.5,Healthy,0
+373,21,Female,Driver,26.5,USA,6.52,5.1,26.4,21.3,21,4,0,0.0,180,0,4397,0,6.3,3.5,Morning,Anxiety,71,0,0,21.8,1.19,Summer,Weekend,68.3,Mild,1
+374,40,Male,Sales,20.5,Australia,5.77,6.2,21.6,15.5,30,1,300,1.0,141,1,15552,0,4.1,9.3,Neutral,Healthy,67,0,0,20.6,1.97,Winter,Weekday,67.4,Healthy,0
+375,20,Female,Software Engineer,26.1,USA,6.57,3.1,21.1,18.5,38,3,0,0.0,172,0,6783,0,7.5,7.2,Evening,Both,63,1,0,23.7,1.29,Spring,Weekday,35.8,Mild,0
+376,28,Male,Student,22.3,USA,7.07,6.0,20.3,20.1,20,5,200,0.0,129,1,14207,0,6.8,5.5,Morning,Healthy,66,1,0,22.1,0.65,Autumn,Weekday,71.2,Healthy,0
+377,47,Female,Retired,26.4,USA,7.75,7.8,23.6,22.2,19,4,0,0.0,45,1,7052,19,1.0,1.7,Neutral,Healthy,67,1,0,18.0,0.93,Winter,Weekday,100.0,Healthy,1
+378,18,Male,Manager,33.4,South Korea,5.1,4.3,26.4,29.7,37,2,0,0.0,180,1,15462,0,7.3,7.9,Evening,Healthy,58,0,0,23.6,1.87,Winter,Weekday,70.6,Moderate,0
+379,45,Female,Homemaker,21.1,India,7.02,4.9,21.7,19.2,17,6,0,0.0,67,0,1271,31,6.0,5.0,Neutral,Both,53,0,0,21.2,1.2,Summer,Weekday,44.0,Mild,1
+380,27,Male,Retired,20.9,Japan,9.31,4.2,22.8,28.1,37,4,150,1.0,35,1,7006,14,4.2,0.0,Evening,Both,64,0,0,23.8,1.51,Summer,Weekday,43.0,Mild,1
+381,22,Male,Software Engineer,24.4,India,6.4,6.5,26.7,18.2,14,0,0,0.0,19,0,2222,0,6.7,10.7,Neutral,Healthy,67,0,0,24.1,1.19,Spring,Weekday,79.9,Healthy,0
+382,40,Other,Freelancer,31.2,India,6.95,5.3,22.7,18.9,15,5,0,0.0,65,0,6118,80,5.1,8.5,Neutral,Healthy,66,1,0,22.0,2.69,Autumn,Weekday,61.6,Healthy,1
+383,38,Male,Teacher,25.9,India,6.31,5.5,16.7,20.3,16,0,100,0.0,44,1,8543,0,5.8,7.0,Neutral,Healthy,80,0,0,21.6,0.69,Spring,Weekday,68.1,Healthy,1
+384,49,Female,Retired,24.8,Japan,8.08,7.2,17.7,12.1,15,3,0,4.0,29,0,8724,70,2.1,0.3,Neutral,Healthy,61,1,0,18.8,0.76,Winter,Weekday,74.7,Healthy,0
+385,42,Male,Software Engineer,33.7,Australia,6.55,4.7,19.4,12.6,24,4,40,1.0,65,0,4785,0,7.4,5.3,Evening,Healthy,66,1,0,20.5,1.57,Summer,Weekday,59.0,Mild,1
+386,45,Female,Nurse,24.7,Brazil,6.5,3.8,22.0,14.2,16,8,0,1.0,40,1,9878,0,7.5,8.1,Morning,Healthy,63,1,0,23.1,0.57,Summer,Weekend,69.4,Healthy,0
+387,27,Male,Doctor,20.7,India,6.73,4.2,23.4,20.5,15,5,0,0.0,29,1,9030,32,6.8,13.2,Evening,Healthy,73,1,0,23.7,2.16,Summer,Weekday,76.0,Healthy,1
+388,24,Female,Teacher,21.4,India,3.91,1.0,18.6,20.3,23,6,80,0.0,25,0,7779,42,7.6,9.7,Neutral,Both,65,0,0,18.7,1.83,Winter,Weekday,4.2,Severe,0
+389,42,Male,Homemaker,27.8,USA,9.25,6.1,20.7,24.5,21,4,0,0.0,162,1,8634,0,3.1,0.9,Neutral,Healthy,68,1,0,18.9,0.8,Summer,Weekend,82.4,Healthy,0
+390,45,Male,Student,25.3,USA,6.08,5.3,23.8,20.0,19,2,0,0.0,71,1,9232,0,7.2,9.3,Neutral,Healthy,55,0,0,19.5,1.34,Winter,Weekday,75.2,Healthy,1
+391,63,Male,Doctor,35.3,Netherlands,5.68,3.3,19.4,9.5,23,4,40,1.0,67,0,5334,0,7.0,10.8,Neutral,Healthy,75,0,0,22.4,-0.44,Spring,Weekday,37.5,Mild,0
+392,31,Male,Sales,17.7,USA,5.8,2.6,16.0,15.4,10,5,0,2.0,68,0,11605,32,5.0,7.4,Neutral,Depression,69,0,0,16.9,1.21,Winter,Weekend,15.4,Mild,0
+393,29,Female,Manager,30.6,India,6.43,4.6,17.4,25.6,23,2,0,0.0,76,0,4842,0,5.0,9.1,Morning,Anxiety,60,0,0,20.1,2.18,Spring,Weekday,50.6,Mild,1
+394,43,Male,Nurse,21.5,Germany,5.68,4.8,19.6,21.1,10,2,0,0.0,28,0,4383,51,5.2,10.7,Morning,Healthy,65,1,0,20.3,3.0,Autumn,Weekday,71.1,Healthy,0
+395,28,Female,Software Engineer,28.3,India,5.43,3.9,23.0,25.8,6,5,0,0.0,26,1,9864,0,6.0,7.8,Neutral,Healthy,59,1,0,22.5,0.64,Summer,Weekday,59.5,Mild,0
+396,53,Female,Driver,31.3,Brazil,5.49,5.0,20.8,21.5,9,2,0,0.0,25,1,9357,0,5.6,9.8,Morning,Healthy,64,1,0,17.1,0.5,Autumn,Weekday,65.2,Mild,0
+397,48,Male,Doctor,31.6,India,6.7,5.8,22.4,13.2,11,5,0,0.0,55,0,6892,5,5.8,10.7,Morning,Healthy,55,1,0,18.9,1.72,Summer,Weekday,65.6,Healthy,0
+398,31,Male,Lawyer,28.9,USA,4.19,1.0,16.9,24.5,27,5,0,1.0,37,1,10619,0,8.5,10.1,Neutral,Both,61,1,1,23.1,1.17,Winter,Weekend,7.4,Severe,0
+399,42,Female,Lawyer,26.3,Germany,5.42,2.3,20.9,24.0,30,3,200,0.0,35,0,3915,0,5.7,11.4,Evening,Anxiety,65,1,0,24.2,1.9,Summer,Weekday,29.5,Mild,1
+400,42,Male,Doctor,27.8,USA,6.8,4.0,17.5,19.6,23,5,0,0.0,56,1,17950,5,7.0,11.8,Neutral,Healthy,58,1,0,17.1,1.88,Spring,Weekday,63.8,Healthy,1
+401,21,Male,Lawyer,21.6,USA,5.05,3.0,19.5,21.8,26,4,0,0.0,180,1,4040,0,9.0,14.5,Morning,Healthy,73,1,0,23.8,-1.0,Spring,Weekday,47.7,Mild,0
+402,51,Female,Software Engineer,16.0,India,5.42,3.2,22.7,18.5,15,0,0,1.0,90,1,6770,0,5.2,5.3,Neutral,Both,70,1,0,19.2,0.7,Summer,Weekday,31.1,Mild,0
+403,34,Female,Nurse,28.7,India,5.33,5.1,20.3,25.8,21,4,80,0.0,57,0,8766,0,5.9,9.6,Neutral,Healthy,71,0,0,15.8,1.43,Spring,Weekday,62.5,Mild,1
+404,46,Female,Driver,23.3,USA,5.08,4.6,17.8,19.1,26,0,0,0.0,26,1,5679,0,6.4,8.7,Neutral,Healthy,78,0,0,20.8,0.87,Autumn,Weekday,60.4,Healthy,1
+405,28,Male,Doctor,23.0,Germany,3.63,5.0,14.5,15.9,14,2,0,3.0,17,0,7178,0,5.2,14.7,Neutral,Depression,66,0,0,17.5,2.07,Winter,Weekday,9.1,Moderate,1
+406,50,Male,Manager,28.9,India,5.41,1.2,15.2,13.9,19,6,150,0.0,129,1,9648,0,7.3,9.7,Neutral,Depression,60,1,0,16.4,2.14,Winter,Weekday,16.9,Severe,0
+407,30,Female,Retired,22.7,Japan,9.25,8.3,22.3,20.0,16,0,0,0.0,68,1,11075,0,1.2,0.0,Morning,Healthy,60,1,0,19.4,0.42,Autumn,Weekend,100.0,Healthy,1
+408,18,Female,Nurse,23.4,India,5.77,3.9,24.2,26.1,15,1,0,0.0,108,0,3640,0,5.4,12.5,Neutral,Healthy,67,1,0,15.0,1.1,Summer,Weekday,62.4,Healthy,0
+409,51,Female,Freelancer,32.1,USA,8.26,5.4,23.4,17.7,16,4,300,2.0,29,1,10182,14,4.1,5.6,Morning,Depression,65,0,0,23.6,0.67,Autumn,Weekday,64.4,Mild,1
+410,21,Male,Teacher,34.2,Japan,9.16,4.9,20.1,23.2,31,4,0,0.0,84,1,8071,36,6.4,3.0,Evening,Both,70,0,0,17.2,2.5,Autumn,Weekend,61.2,Severe,1
+411,28,Female,Software Engineer,32.3,Canada,6.71,4.6,14.5,22.6,12,6,0,1.0,51,0,4886,0,7.0,10.1,Morning,Healthy,73,1,0,20.3,1.1,Winter,Weekday,45.8,Mild,0
+412,55,Male,Retired,29.7,UK,9.22,5.1,22.5,20.5,34,5,150,1.0,37,0,5314,0,1.9,3.3,Evening,Both,72,1,0,17.7,0.45,Summer,Weekday,54.4,Moderate,1
+413,55,Female,Lawyer,28.5,Brazil,5.18,4.0,17.9,9.2,19,7,0,0.0,41,0,11286,60,6.2,11.9,Neutral,Healthy,60,0,0,20.2,1.4,Winter,Weekday,38.8,Mild,0
+414,36,Female,Nurse,30.9,India,7.54,6.9,18.6,15.6,13,2,0,0.0,21,0,7474,0,6.9,5.1,Neutral,Healthy,71,0,0,22.4,1.26,Winter,Weekend,69.9,Healthy,0
+415,38,Female,Teacher,28.2,Netherlands,7.37,5.0,11.1,24.3,21,1,0,2.0,17,1,7105,0,6.5,11.6,Evening,Depression,64,0,0,17.6,1.28,Winter,Weekday,61.5,Mild,0
+416,32,Female,Doctor,24.9,USA,5.33,2.3,17.9,19.3,32,4,300,0.0,17,1,10671,0,8.3,14.7,Neutral,Anxiety,73,0,0,22.7,1.73,Spring,Weekday,30.3,Severe,0
+417,27,Male,Homemaker,23.2,Italy,7.26,6.0,22.6,26.8,26,2,80,0.0,36,1,10333,17,6.7,7.6,Evening,Healthy,70,1,0,23.0,-0.74,Spring,Weekday,83.2,Healthy,1
+418,28,Female,Freelancer,29.3,Brazil,9.43,6.3,18.4,18.8,9,2,0,2.0,62,0,5886,0,2.7,7.3,Morning,Anxiety,71,1,0,21.9,1.89,Winter,Weekend,69.5,Healthy,1
+419,39,Male,Driver,25.6,UK,5.62,2.8,16.6,19.3,23,8,80,0.0,48,0,3471,0,6.9,12.2,Neutral,Healthy,78,0,1,18.8,2.85,Summer,Weekday,29.6,Mild,0
+420,42,Male,Freelancer,26.7,Germany,6.54,4.8,24.6,19.0,19,2,0,0.0,61,0,618,0,6.8,6.9,Neutral,Depression,55,1,0,22.9,-0.8,Spring,Weekday,59.1,Healthy,1
+421,44,Male,Software Engineer,21.7,India,6.34,5.0,13.1,20.8,13,2,0,5.0,54,0,2059,23,4.0,10.2,Evening,Healthy,72,0,0,23.8,-0.05,Autumn,Weekday,40.0,Healthy,0
+422,44,Male,Student,35.4,Japan,6.35,6.2,19.8,15.9,30,5,0,0.0,48,0,1266,0,4.7,4.4,Evening,Healthy,67,0,0,20.3,0.03,Summer,Weekday,84.2,Mild,0
+423,21,Female,Driver,28.1,UK,5.16,3.8,19.6,15.9,19,2,0,1.0,11,0,6186,0,7.3,8.4,Neutral,Both,67,1,0,19.7,-0.12,Spring,Weekday,23.6,Severe,0
+424,33,Male,Teacher,23.9,India,7.3,6.3,17.0,21.8,20,1,0,5.0,39,0,1536,0,6.3,4.9,Evening,Healthy,73,1,0,15.0,0.97,Spring,Weekday,58.4,Healthy,1
+425,20,Male,Sales,27.2,Australia,6.51,6.1,22.7,18.7,33,2,150,0.0,87,0,9091,0,6.4,9.2,Evening,Healthy,47,1,0,22.4,1.91,Autumn,Weekday,63.3,Healthy,1
+426,35,Female,Homemaker,27.0,Germany,7.9,7.4,16.0,20.7,22,2,0,4.0,21,1,14525,6,3.6,4.6,Neutral,Healthy,68,1,0,19.4,0.8,Spring,Weekday,83.5,Healthy,1
+427,32,Male,Manager,33.4,Mexico,4.8,3.9,18.1,21.0,33,4,300,2.0,28,0,3464,25,6.3,6.8,Evening,Healthy,83,1,0,23.1,2.04,Summer,Weekday,43.7,Moderate,0
+428,49,Male,Student,25.3,Italy,6.32,5.1,20.9,14.4,34,3,200,0.0,123,0,10621,0,5.7,0.3,Neutral,Healthy,56,1,1,22.4,2.13,Winter,Weekend,44.3,Mild,0
+429,29,Female,Student,25.5,UK,5.91,3.2,15.9,20.9,13,4,40,0.0,82,0,7014,0,5.4,6.1,Morning,Healthy,75,1,1,20.8,1.45,Winter,Weekday,36.8,Healthy,0
+430,22,Female,Freelancer,24.3,India,6.11,6.4,20.3,24.9,12,4,0,0.0,104,1,4243,0,5.2,8.5,Neutral,Healthy,67,0,0,20.9,1.4,Spring,Weekday,84.3,Healthy,0
+431,23,Female,Sales,16.0,USA,7.68,5.0,12.5,21.5,17,1,0,0.0,126,0,6262,0,2.6,8.9,Morning,Healthy,76,1,0,23.2,2.15,Spring,Weekday,82.4,Healthy,1
+432,43,Male,Homemaker,29.1,Mexico,9.32,5.0,18.9,13.8,18,3,0,0.0,39,0,7537,0,7.2,2.1,Morning,Both,58,1,0,22.8,1.29,Winter,Weekend,46.5,Mild,0
+433,37,Female,Teacher,35.5,India,6.12,4.7,17.0,14.9,17,3,0,0.0,116,0,1813,5,5.8,6.1,Morning,Anxiety,77,1,0,26.2,1.29,Autumn,Weekday,47.2,Mild,0
+434,21,Female,Lawyer,21.6,Australia,4.85,3.4,14.9,21.8,23,4,0,0.0,44,0,5006,53,8.4,13.7,Evening,Healthy,73,1,1,22.7,3.0,Summer,Weekday,18.0,Moderate,0
+435,21,Female,Software Engineer,25.4,India,8.02,5.4,25.8,27.0,27,3,0,0.0,112,1,11305,0,4.7,8.5,Neutral,Both,68,0,0,23.1,2.43,Summer,Weekday,92.6,Mild,1
+436,40,Male,Nurse,31.5,India,5.76,3.2,22.8,22.5,14,5,0,0.0,86,1,2858,19,5.6,6.2,Morning,Depression,73,1,0,21.9,0.88,Spring,Weekend,51.5,Moderate,0
+437,20,Female,Homemaker,26.6,South Korea,8.8,5.6,25.1,27.2,10,0,0,0.0,32,1,10212,0,4.9,2.1,Morning,Depression,75,1,0,16.4,0.94,Autumn,Weekday,83.9,Healthy,1
+438,46,Female,Software Engineer,30.9,Netherlands,6.52,5.4,23.6,20.4,18,2,100,1.0,46,1,6684,56,4.3,3.9,Neutral,Healthy,61,1,0,22.9,2.24,Summer,Weekend,73.1,Healthy,1
+439,40,Male,Freelancer,29.5,India,7.83,5.4,27.2,18.7,21,5,0,0.0,72,1,11572,0,6.9,2.6,Neutral,Anxiety,67,1,0,19.5,1.04,Winter,Weekday,73.0,Mild,1
+440,21,Male,Doctor,28.9,Sweden,8.09,3.7,23.0,20.5,27,4,0,0.0,16,0,7556,0,8.5,7.6,Morning,Anxiety,65,1,0,17.8,1.16,Summer,Weekend,60.9,Mild,0
+441,21,Male,Freelancer,23.0,France,6.79,4.4,16.1,20.2,11,3,100,0.0,11,1,12007,11,7.1,6.2,Morning,Depression,56,0,0,20.3,0.85,Autumn,Weekday,57.8,Mild,1
+442,62,Female,Freelancer,23.3,Italy,7.5,6.5,15.7,15.2,15,4,0,2.0,73,0,6308,0,5.2,5.5,Morning,Healthy,74,0,0,27.3,2.22,Autumn,Weekend,63.7,Healthy,1
+443,29,Male,Doctor,24.5,Brazil,6.6,5.3,20.9,18.7,20,4,80,0.0,37,0,9714,0,7.3,5.2,Morning,Healthy,75,1,0,22.0,2.41,Winter,Weekend,76.1,Healthy,1
+444,29,Female,Teacher,21.7,Australia,9.82,4.7,16.2,18.6,20,2,0,0.0,83,0,11010,0,5.8,6.6,Neutral,Depression,86,1,0,20.1,2.46,Spring,Weekend,41.8,Mild,1
+445,45,Male,Software Engineer,25.2,Mexico,7.36,5.8,20.1,17.5,23,4,40,2.0,68,0,5776,32,5.2,6.2,Neutral,Healthy,70,0,0,17.8,1.5,Winter,Weekend,55.5,Healthy,1
+446,55,Male,Driver,25.3,USA,6.79,3.8,18.4,16.7,30,2,0,2.0,39,0,7222,44,6.8,8.7,Evening,Healthy,63,1,0,24.9,0.44,Autumn,Weekday,47.0,Healthy,1
+447,62,Female,Freelancer,27.6,Mexico,6.2,5.0,19.4,16.0,30,4,0,0.0,137,0,1255,46,6.1,8.1,Evening,Healthy,64,0,0,23.1,3.0,Winter,Weekday,70.0,Mild,0
+448,42,Male,Teacher,32.5,Netherlands,5.85,4.3,17.9,11.5,23,7,0,0.0,36,0,14523,5,4.3,2.9,Evening,Healthy,63,0,0,17.9,-1.0,Spring,Weekday,42.1,Mild,0
+449,29,Female,Doctor,24.2,Canada,7.68,8.2,22.3,20.5,15,3,0,2.0,15,0,5895,24,4.3,7.8,Neutral,Healthy,63,1,0,18.5,1.14,Autumn,Weekend,90.3,Healthy,1
+450,21,Female,Retired,20.8,Australia,5.8,6.2,19.3,30.0,24,0,40,0.0,73,1,8971,13,2.6,0.0,Neutral,Healthy,55,0,0,22.2,1.42,Summer,Weekday,79.3,Healthy,0
+451,43,Female,Software Engineer,21.7,Germany,7.45,5.4,22.6,24.1,16,1,0,0.0,51,1,10388,30,5.2,4.4,Evening,Healthy,59,1,0,19.9,1.88,Summer,Weekend,94.0,Healthy,1
+452,35,Male,Software Engineer,32.1,India,6.54,5.1,18.6,17.0,21,4,80,2.0,31,0,4703,0,3.6,8.1,Evening,Healthy,68,1,0,16.7,1.04,Winter,Weekday,63.8,Healthy,1
+453,31,Female,Sales,34.0,USA,6.18,5.3,14.3,21.6,7,3,0,2.0,60,0,6612,23,7.0,8.1,Morning,Healthy,74,1,0,20.1,1.73,Winter,Weekday,55.2,Mild,1
+454,51,Female,Student,25.3,UK,4.06,1.5,21.2,12.4,35,5,100,0.0,81,0,6149,41,8.1,2.8,Evening,Anxiety,73,1,1,15.0,2.09,Spring,Weekday,9.2,Severe,0
+455,22,Female,Student,26.9,USA,6.29,6.4,22.5,23.8,27,3,0,0.0,52,0,1638,17,3.5,4.2,Evening,Healthy,60,1,0,24.7,1.74,Winter,Weekday,68.1,Healthy,0
+456,33,Male,Teacher,35.0,UK,6.24,5.4,25.1,25.3,23,2,40,0.0,59,0,5319,0,4.7,9.9,Neutral,Anxiety,67,1,0,23.9,1.73,Summer,Weekday,67.2,Mild,0
+457,18,Male,Software Engineer,21.1,France,5.45,4.8,22.6,17.2,13,2,0,0.0,18,0,5051,24,5.4,6.0,Neutral,Healthy,72,1,0,21.7,2.01,Autumn,Weekday,56.1,Healthy,0
+458,32,Male,Manager,31.7,Japan,7.02,5.7,19.4,28.9,27,5,100,0.0,135,0,7532,0,6.8,7.5,Morning,Healthy,66,0,0,25.5,-0.05,Autumn,Weekend,77.2,Mild,1
+459,20,Female,Student,25.5,France,6.98,5.6,16.8,19.0,10,3,0,3.0,73,1,6128,0,3.3,4.5,Neutral,Healthy,76,1,0,21.2,1.52,Autumn,Weekday,70.8,Healthy,1
+460,22,Male,Manager,27.0,India,7.16,5.2,23.2,26.5,30,1,0,0.0,36,1,11088,0,5.1,9.8,Evening,Anxiety,75,0,0,27.2,0.33,Autumn,Weekday,81.2,Healthy,1
+461,22,Male,Sales,21.7,Germany,5.18,5.1,22.8,24.6,11,5,0,0.0,107,1,11052,44,6.6,10.2,Morning,Healthy,63,1,0,19.0,0.14,Autumn,Weekday,60.8,Mild,0
+462,38,Female,Driver,22.2,India,5.65,1.7,17.2,15.7,21,8,0,0.0,69,1,14706,0,6.5,11.8,Evening,Healthy,60,1,1,19.4,1.39,Autumn,Weekday,36.2,Mild,0
+463,42,Male,Freelancer,24.1,India,7.24,6.2,27.1,26.1,18,2,0,0.0,13,1,9934,0,5.6,9.6,Neutral,Healthy,71,1,0,25.1,0.77,Spring,Weekday,100.0,Healthy,1
+464,36,Female,Software Engineer,24.7,Australia,6.71,5.9,19.4,24.0,16,3,0,0.0,84,0,5112,29,5.7,6.2,Neutral,Healthy,71,1,0,24.8,0.92,Autumn,Weekday,76.5,Healthy,1
+465,57,Female,Student,26.4,Canada,4.46,3.5,17.2,15.3,26,5,150,2.0,39,1,6012,0,5.7,5.7,Neutral,Healthy,72,1,0,17.5,2.15,Winter,Weekday,26.7,Mild,0
+466,29,Male,Sales,22.4,Australia,8.01,5.0,21.3,16.9,15,4,0,0.0,59,1,7268,0,7.0,5.9,Morning,Healthy,63,1,0,20.9,1.08,Spring,Weekend,81.0,Healthy,1
+467,27,Female,Retired,21.0,Canada,8.56,7.4,21.5,19.3,17,2,80,1.0,72,0,7479,33,2.4,0.0,Morning,Healthy,75,1,0,21.5,0.27,Spring,Weekend,87.9,Healthy,1
+468,48,Male,Software Engineer,29.1,Mexico,7.56,6.2,23.8,23.7,18,2,0,0.0,60,1,12615,0,4.9,9.1,Neutral,Healthy,59,1,0,25.8,1.73,Autumn,Weekday,100.0,Healthy,1
+469,25,Female,Student,19.7,Germany,7.15,7.1,22.3,22.1,10,1,40,0.0,144,0,11592,0,5.1,2.0,Morning,Anxiety,60,0,0,21.0,0.53,Winter,Weekend,86.4,Healthy,1
+470,57,Female,Sales,38.6,Canada,6.29,3.1,19.7,13.4,33,5,0,3.0,94,0,3068,14,5.7,12.0,Evening,Healthy,75,1,0,15.8,1.42,Winter,Weekday,40.1,Moderate,0
+471,18,Male,Freelancer,26.6,UK,7.45,5.9,23.3,25.9,35,2,80,0.0,66,0,5763,45,3.2,3.4,Evening,Anxiety,71,1,0,20.5,1.14,Summer,Weekend,79.6,Healthy,0
+472,58,Female,Lawyer,32.1,India,7.97,4.1,18.0,14.9,22,8,0,1.0,132,0,11862,33,8.3,12.6,Neutral,Depression,61,1,0,21.8,1.27,Winter,Weekday,50.2,Moderate,1
+473,19,Male,Software Engineer,26.3,UK,7.01,7.9,20.4,24.7,27,1,40,0.0,148,1,7893,0,5.2,5.1,Neutral,Healthy,63,1,0,22.5,1.24,Spring,Weekend,100.0,Healthy,0
+474,50,Female,Lawyer,23.6,UK,5.72,4.2,24.0,16.7,26,2,100,0.0,31,0,3428,0,6.4,11.7,Evening,Healthy,76,1,1,17.8,0.29,Summer,Weekday,57.0,Healthy,0
+475,34,Female,Software Engineer,22.4,USA,6.77,5.0,20.3,16.9,18,3,100,0.0,36,1,5747,0,5.2,4.9,Morning,Anxiety,61,0,0,19.5,0.79,Spring,Weekend,64.0,Healthy,1
+476,65,Male,Teacher,31.5,USA,6.33,3.0,10.2,18.9,18,6,0,5.0,33,1,4754,5,7.0,9.8,Neutral,Anxiety,68,0,0,27.6,2.08,Autumn,Weekday,25.9,Severe,0
+477,20,Male,Homemaker,21.5,India,6.39,5.5,22.5,23.0,16,4,0,0.0,16,1,8206,0,5.1,6.0,Neutral,Healthy,55,1,0,22.7,0.72,Winter,Weekday,85.3,Healthy,1
+478,35,Male,Nurse,29.8,USA,5.73,4.7,20.2,16.3,4,6,0,0.0,32,0,5289,0,6.4,9.5,Morning,Healthy,72,0,0,19.5,1.51,Summer,Weekday,44.4,Healthy,0
+479,58,Female,Student,25.1,Germany,6.57,6.5,20.0,14.6,16,1,80,2.0,69,1,6863,0,6.5,5.2,Morning,Healthy,77,1,0,23.1,0.15,Autumn,Weekday,71.3,Healthy,0
+480,34,Female,Lawyer,22.4,Germany,7.44,5.6,16.5,20.5,20,4,40,3.0,162,1,7493,0,6.4,8.6,Neutral,Anxiety,72,1,0,21.3,1.14,Autumn,Weekend,72.0,Mild,0
+481,38,Female,Driver,29.8,India,3.77,1.0,17.4,16.1,41,7,150,2.0,19,0,8975,0,7.5,12.7,Evening,Both,73,0,0,22.7,0.1,Summer,Weekday,0.0,Severe,0
+482,40,Male,Software Engineer,26.9,India,6.37,5.4,20.6,18.7,27,6,80,0.0,103,1,13009,0,3.7,8.8,Evening,Healthy,69,0,0,20.5,1.84,Summer,Weekday,66.1,Healthy,0
+483,32,Female,Nurse,30.5,Germany,5.84,3.8,11.9,14.6,6,4,40,4.0,20,1,9180,0,6.9,9.9,Neutral,Healthy,55,0,0,24.0,0.97,Autumn,Weekday,37.9,Mild,1
+484,38,Female,Software Engineer,29.1,UK,6.78,5.0,26.3,20.5,18,2,40,0.0,66,1,10794,49,6.8,7.5,Neutral,Anxiety,64,0,0,19.1,0.51,Winter,Weekend,72.8,Healthy,0
+485,36,Female,Teacher,29.2,Japan,7.68,8.9,22.5,17.2,16,1,0,0.0,8,0,5928,0,4.2,8.5,Neutral,Healthy,71,0,0,22.1,2.4,Winter,Weekday,96.7,Healthy,1
+486,50,Female,Software Engineer,17.4,France,5.5,5.3,27.4,18.2,11,3,0,0.0,130,1,6897,0,5.5,8.6,Neutral,Healthy,63,1,0,19.0,0.11,Spring,Weekday,80.6,Healthy,0
+487,19,Female,Sales,27.0,India,6.0,5.9,18.5,27.7,11,2,0,0.0,49,1,10617,0,4.4,7.4,Morning,Healthy,69,1,0,23.2,1.42,Spring,Weekday,73.6,Healthy,0
+488,27,Female,Teacher,27.9,USA,7.94,6.8,15.8,26.4,20,6,300,0.0,32,1,8511,52,4.1,0.8,Morning,Healthy,64,1,0,17.8,1.86,Summer,Weekend,78.3,Healthy,1
+489,55,Other,Retired,37.6,USA,9.11,7.1,23.8,21.4,10,2,0,2.0,35,1,12815,38,1.0,0.0,Morning,Healthy,53,0,0,16.6,1.58,Spring,Weekend,97.7,Healthy,1
+490,50,Female,Homemaker,29.2,India,7.1,6.0,20.7,17.3,15,4,0,0.0,118,0,9156,0,3.7,3.4,Morning,Healthy,75,1,0,23.8,1.35,Autumn,Weekday,72.9,Healthy,1
+491,32,Female,Homemaker,21.3,Brazil,7.72,6.5,10.9,22.5,15,0,0,1.0,58,0,1983,0,6.5,1.0,Morning,Healthy,64,0,0,25.2,1.61,Winter,Weekend,65.3,Healthy,1
+492,37,Male,Student,35.4,Brazil,4.57,2.8,20.7,23.9,23,2,40,0.0,145,1,11061,0,7.6,3.2,Neutral,Anxiety,66,0,0,16.2,2.79,Summer,Weekday,52.6,Moderate,0
+493,26,Female,Student,23.5,Spain,5.73,3.1,17.8,24.5,17,6,200,0.0,29,1,13475,0,5.6,10.1,Neutral,Healthy,66,1,0,15.9,1.1,Winter,Weekday,49.1,Healthy,0
+494,24,Male,Driver,24.4,Mexico,8.27,3.2,19.6,30.0,27,2,150,0.0,47,1,7153,0,6.9,5.3,Morning,Both,68,1,0,23.5,2.97,Autumn,Weekend,48.0,Mild,0
+495,32,Female,Homemaker,28.3,Canada,6.44,5.8,22.2,17.0,19,6,0,0.0,53,0,6856,0,4.6,5.4,Neutral,Healthy,79,0,0,20.7,-0.11,Autumn,Weekday,70.8,Healthy,1
+496,29,Male,Student,24.4,USA,6.17,4.1,17.4,20.4,22,2,40,0.0,129,1,7782,0,4.3,5.4,Neutral,Healthy,62,0,0,23.1,1.09,Autumn,Weekday,57.5,Healthy,0
+497,36,Female,Nurse,22.6,Mexico,4.43,1.6,19.3,20.4,40,5,200,1.0,19,0,3986,0,8.2,8.9,Evening,Both,83,0,1,22.9,2.15,Summer,Weekend,0.0,Severe,0
+498,20,Male,Nurse,26.0,Italy,5.66,3.1,16.2,25.6,26,3,0,0.0,13,0,5773,0,6.8,7.5,Evening,Healthy,60,1,0,20.6,0.0,Winter,Weekend,45.4,Healthy,0
+499,59,Female,Doctor,23.9,India,6.0,3.7,20.6,23.7,23,6,0,2.0,26,1,13067,0,5.1,11.6,Evening,Healthy,70,1,0,15.3,0.58,Winter,Weekday,45.2,Mild,0
+500,62,Female,Nurse,19.5,Italy,5.75,4.6,23.6,18.8,20,2,0,0.0,34,1,5987,7,7.1,11.5,Neutral,Healthy,72,0,0,19.9,0.59,Summer,Weekday,65.7,Healthy,0
