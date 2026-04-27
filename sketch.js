@@ -14,14 +14,9 @@ function preload() {
 }
  
 function setup() {
-<<<<<<< HEAD
   createCanvas(windowWidth, windowHeight);
-=======
-  createCanvas(500, 500);
->>>>>>> 89e4dade38fd0bf3cd36c0f62ff2fcceada4992b
  
   bgSlider = createSlider(0, 255, 220);
-  bgSlider.position(190, 50);
   bgSlider.style("width", "120px");
  
   guessInput = createInput("");
@@ -31,12 +26,12 @@ function setup() {
  
   let count = min(50, data.getRowCount());
   for (let i = 0; i < count; i++) {
-    let row    = data.getRow(i);
-    let sleep   = row.getNum("sleep_duration_hrs");
-    let stress  = row.getNum("stress_score");
-    let quality = row.getNum("sleep_quality_score");
-    let occ     = row.getString("occupation");
-    let size    = map(quality, 1, 10, 20, 80);
+    let rowData = data.getRow(i);
+    let sleep   = rowData.getNum("sleep_duration_hrs");
+    let stress  = rowData.getNum("stress_score");
+    let quality = rowData.getNum("sleep_quality_score");
+    let occ     = rowData.getString("occupation");
+    let bubbleSize = map(quality, 1, 10, 20, 80);
     let col     = lerpColor(
       color(100, 180, 255, 200),
       color(255, 80, 80, 200),
@@ -45,7 +40,7 @@ function setup() {
     bubbles.push({
       x: random(width),
       y: random(height - 40) + 30,
-      size,
+      size: bubbleSize,
       speed: map(stress, 1, 10, 0.2, 3),
       sleep, stress, quality, occ, color: col
     });
@@ -69,14 +64,17 @@ function draw() {
   let saturation = map(brightness, 0, 255, 0.3, 1);
   let ink = brightness > 128 ? color(0) : color(255);
  
+  //Slider and label centered at top
+  bgSlider.position(width / 2 - 60, 15);
+ 
   //Brightness label
   fill(ink);
-  textSize(10);
+  textSize(16);
   textAlign(CENTER);
   text(
-    brightness < 100 ? "Dim light = rods active, color fades" : "Bright light = cones active, red/blue vivid",
-    width / 2, 30
-  );
+  brightness < 100 ? "Dim light = rods active, color fades" : "Bright light = cones active, red/blue vivid",
+  width / 2, 50
+);
  
   for (let b of bubbles) {
     if (!paused) {
@@ -91,13 +89,15 @@ function draw() {
  
   //Instructions
   fill(ink);
-  textSize(11);
+  textSize(16);
   textAlign(CENTER);
-  text("Click a bubble: Guess its stress score", width / 2, height - 10);
- 
+  text("Click a bubble: Guess its stress score", width / 2, height - 25);
   //Guess/reveal overlay
   if (paused && selectedBubble) {
     let b = selectedBubble;
+ 
+    //Reposition input to center on current canvas size
+    guessInput.position(width / 2 - 30, height / 2 + 10);
  
     //Card background
     fill(brightness > 128 ? color(255, 255, 255, 225) : color(0, 0, 0, 215));
@@ -194,4 +194,8 @@ function keyPressed() {
     guessSubmitted = false;
     guessInput.value("");
   }
+}
+ 
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
 }
