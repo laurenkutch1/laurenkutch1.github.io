@@ -14,7 +14,11 @@ function preload() {
 }
  
 function setup() {
+<<<<<<< HEAD
   createCanvas(windowWidth, windowHeight);
+=======
+  createCanvas(500, 500);
+>>>>>>> 89e4dade38fd0bf3cd36c0f62ff2fcceada4992b
  
   bgSlider = createSlider(0, 255, 220);
   bgSlider.position(190, 50);
