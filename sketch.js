@@ -66,7 +66,7 @@ function drawBubble(b, saturation) {
 
 function draw() {
   //BACKGROUND OSCILLATION
-  t += 0.02;
+  t += 0.01;
 
   let brightness = map(sin(t), -1, 1, 40, 255);
   background(brightness);
